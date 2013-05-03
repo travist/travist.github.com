@@ -132,7 +132,9 @@ gwQco1KRMDSmXSMkDwIDAQAB
 </html>
 {% endcodeblock %}
 
-Look at how index.html works to get a better idea.
+Here is what you end up with...
+
+<iframe src="http://travistidwell.com/jsencrypt/index.html" width="100%" height="1050px" frameborder="0"></iframe>
 
 ## Other Information
 This library heavily utilizes the wonderful work of Tom Wu found at [http://www-cs-students.stanford.edu/~tjw/jsbn](http://www-cs-students.stanford.edu/~tjw/jsbn).

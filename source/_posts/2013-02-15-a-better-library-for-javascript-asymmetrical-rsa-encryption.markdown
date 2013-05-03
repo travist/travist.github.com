@@ -57,7 +57,11 @@ cat rsa_1024_priv.pem
 
 {% highlight bash %}
 openssl rsa -pubout -in rsa_1024_priv.pem -out rsa_1024_pub.pem
-You can see the public key by typing...
+{% endhighlight %}
+
+ - You can see the public key by typing...
+
+{% highlight bash %}
 cat rsa_1024_pub.pem
 {% endhighlight %}
 

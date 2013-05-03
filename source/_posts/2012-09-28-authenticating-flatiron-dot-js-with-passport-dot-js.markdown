@@ -42,8 +42,11 @@ var app = express();
 // ... BOILERPLATE SETUP CODE GOES HERE ...
 app.use(passport.initialize());
 app.use(passport.session());
+{% endcodeblock %}
+
 You simply need to call...
 
+{% codeblock lang:javascript %}
 var flatiron =      require('flatiron');
 var fipassport =    require('flatiron-passport');
 var app =           flatiron.app;

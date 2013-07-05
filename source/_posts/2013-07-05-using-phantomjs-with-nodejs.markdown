@@ -9,7 +9,7 @@ categories:
 using Node.js.  The challenge, however, is when using Node.js for building tests
 and automation, your options are pretty slim when picking your headless browser.
 While <a href="http://zombie.labnotes.org/">Zombie.js</a> is a decent browser, it
-uses JSDOM for its layout engine, whereas most of the web is ran on WebKit.  This
+uses JSDOM for its layout engine, whereas most of the web is ran on (or based off of) <a href="https://www.webkit.org/">WebKit</a>.  This
 creates problems when trying to formulate accurate tests as well as benefit from
 the ongoing development into the WebKit engine.  What really peaked my interest
 was the project called <a href="http://phantomjs.org">Phantom.js</a> which is

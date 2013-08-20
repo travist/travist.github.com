@@ -37,6 +37,9 @@ generated with OpenSSL. Enter [JSEncrypt](https://github.com/travist/jsencrypt).
 ## Download
 Go to [https://github.com/travist/jsencrypt](https://github.com/travist/jsencrypt) to download this library.
 
+## Website & Demo
+http://travistidwell.com/jsencrypt
+
 ## How to use this library.
 This library should work hand-in-hand with openssl. With that said, here is how to use this library.
 

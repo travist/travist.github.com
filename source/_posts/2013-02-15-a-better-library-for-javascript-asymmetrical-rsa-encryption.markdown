@@ -83,16 +83,15 @@ cat rsa_1024_pub.pem
         // Run a quick encryption/decryption when they click.
         $('#testme').click(function() {
 
-          // Create the encryption object and set the keys.
-          var crypt = new JSEncrypt();
-          crypt.setPrivateKey($('#privkey').val());
-          crypt.setPublicKey($('#pubkey').val());
+          // Encrypt with the public key...
+          var encrypt = new JSEncrypt();
+          encrypt.setPublicKey($('#pubkey').val());
+          var encrypted = encrypt.encrypt($('#input').val());
 
-          // Encrypt the input with the public key.
-          var encrypted = crypt.encrypt($('#input').val());
-
-          // Now decrypt the crypted text with the private key.
-          var uncrypted = crypt.decrypt(encrypted);
+          // Decrypt with the private key...
+          var decrypt = new JSEncrypt();
+          decrypt.setPrivateKey($('#privkey').val());
+          var uncrypted = decrypt.decrypt(encrypted);
 
           // Now a simple check to see if the round-trip worked.
           if (uncrypted == $('#input').val()) {
@@ -136,9 +135,9 @@ gwQco1KRMDSmXSMkDwIDAQAB
 </html>
 {% endcodeblock %}
 
-Here is what you end up with...
+Here is what you end up with... <a href="http://travistidwell.com/jsencrypt/demo/index.html">http://travistidwell.com/jsencrypt/demo/index.html</a>
 
-<iframe src="http://travistidwell.com/jsencrypt/index.html" width="100%" height="1050px" frameborder="0"></iframe>
+<iframe src="http://travistidwell.com/jsencrypt/demo/index.html" width="100%" height="1200px" frameborder="0"></iframe>
 
 ## Other Information
 This library heavily utilizes the wonderful work of Tom Wu found at [http://www-cs-students.stanford.edu/~tjw/jsbn](http://www-cs-students.stanford.edu/~tjw/jsbn).

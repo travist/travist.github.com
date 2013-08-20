@@ -138,7 +138,7 @@ gwQco1KRMDSmXSMkDwIDAQAB
 </html>
 {% endcodeblock %}
 
-Here is what you end up with... <a href="http://travistidwell.com/jsencrypt/demo/index.html">http://travistidwell.com/jsencrypt/demo/index.html</a>
+Here is a demo... <a href="http://travistidwell.com/jsencrypt/demo/index.html">http://travistidwell.com/jsencrypt/demo/index.html</a>
 
 <iframe src="http://travistidwell.com/jsencrypt/demo/index.html" width="100%" height="1200px" frameborder="0"></iframe>
 

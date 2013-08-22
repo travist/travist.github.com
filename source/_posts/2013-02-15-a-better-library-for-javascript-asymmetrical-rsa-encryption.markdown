@@ -31,7 +31,7 @@ I recognized this as a perfect opportunity to create a simple wrapper library ar
 simply speaks in terms of the <strong>Public</strong> and <strong>Private</strong> keys
 everyone is familiar with.  Of course I found other libraries out there that claim to do the same, but
 what I couldn't find in these libraries was a simple wrapper around this library that basically uses
-Tom's library UNTOUCHED, but simply adds a wrapper to provide parsing of actual Private and Public key-pairs
+Tom's library <a href="https://github.com/travist/jsencrypt/pull/6">practically</a> untouched, but simply adds a wrapper to provide parsing of actual Private and Public key-pairs
 generated with OpenSSL. Enter [JSEncrypt](https://github.com/travist/jsencrypt).
 
 ## Download

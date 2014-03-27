@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: automation | Travis Tidwell]]></title>
+  <link href="http://travistidwell.com/blog/categories/automation/atom.xml" rel="self"/>
+  <link href="http://travistidwell.com/"/>
+  <updated>2014-03-26T21:49:23-05:00</updated>
+  <id>http://travistidwell.com/</id>
+  <author>
+    <name><![CDATA[Travis Tidwell]]></name>
+    <email><![CDATA[travist349@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[drupal.go.js: A node.js package to automate and test Drupal using Zombie.js.]]></title>
+    <link href="http://travistidwell.com/blog/2013/04/14/drupalgo/"/>
+    <updated>2013-04-14T15:45:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/04/14/drupalgo</id>
+    <content type="html"><![CDATA[<p>When I gave my presentation yesterday regarding <a href="blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js">Automating and Testing Drupal with Zombie.js</a>,
+I also introduced a new project that I created which makes it super simple to automate anything
+within the Drupal UI using Zombie.js (which is a completely headless browser implemented in Node.js).
+This project is called <a href="https://github.com/travist/drupal.go.js">drupal.go.js</a> and I am very excited about it.</p>
+
+<!-- more -->
+
+
+<p>Here are the details about this project&hellip;</p>
+
+<h2>Introduction</h2>
+
+<p>This node.js package provides an easy way to automate and test Drupal using the Zombie.js framework. It provides some helpers that make working with Drupal within Zombie.js easy and fun.</p>
+
+<h2>Installation &amp; Usage</h2>
+
+<h3>Step 1</h3>
+
+<p>Install node.js by going to <a href="http://nodejs.org">http://nodejs.org</a></p>
+
+<h3>Step 2</h3>
+
+<p>On OS X install the OSX GCC installer. On Windows you&rsquo;ll need Cygwin to get access to GCC, Python, etc. Read this for detailed instructions and troubleshooting.</p>
+
+<h3>Step 3</h3>
+
+<p>Since this tool requires 0.8 of node.js or earlier, you will need to install the NVM. Go to <a href="https://github.com/creationix/nvm">https://github.com/creationix/nvm</a> and follow the installation section.</p>
+
+<h3>Step 4</h3>
+
+<p>You can now install this library using NPM.</p>
+
+<p><div>
+  <pre><code class='javascript'>nvm use 0.8
+npm install drupalgo</code></pre>
+</div>
+</p>
+
+<h2>Configuration</h2>
+
+<p>The configuration for your automation and testing should be placed within a configuration file in *.json form. This file contains your configurations for your Drupal installation as well as other configurations that you would like to include in your automation and testing, such as content creation, etc.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>config.json </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="err">&amp;ldquo;host&amp;rdquo;:</span> <span class="err">&amp;ldquo;&lt;a</span> <span class="err">href=</span><span class="nt">&quot;http://drupal.local/&quot;</span><span class="err">&gt;http</span><span class="p">:</span><span class="err">//drupal.local/&lt;/a&gt;&amp;rdquo;</span><span class="p">,</span>
+</span><span class='line'>  <span class="err">&amp;ldquo;user&amp;rdquo;:</span> <span class="err">&amp;ldquo;admin&amp;rdquo;,</span>
+</span><span class='line'>  <span class="err">&amp;ldquo;nodes&amp;rdquo;:</span> <span class="err">[&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">&lt;pre&gt;&lt;code&gt;{</span>
+</span><span class='line'>  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;article&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello There&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;This is very cool!&quot;</span>
+</span><span class='line'><span class="p">}</span><span class="err">,</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;article&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;This is another node&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;Nice!&quot;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="err">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">&lt;p&gt;</span>  <span class="err">]</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Example</h2>
+
+<p>You can now include this library in your test application and then do stuff using the simple drupal.go command. Since this library uses Zombie.js for its core browser, you can pass along any Zombie.js command from it&rsquo;s Zombie.js API to the drupal.go command like so&hellip;</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">pushButton</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="err">#</span><span class="nx">edit</span><span class="o">-</span><span class="nx">submit</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This function returns a Promise to be used with the popular Async.js library making it very simple to build intuitive tests without falling into callback hell.</p>
+
+<p>Here is an example of how simple it is to write some automation with this library&hellip;</p>
+
+<p>Login, then create some nodes&hellip;.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">async</span> <span class="o">=</span>     <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">async</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">drupal</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">drupalgo</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">// Load the config.json file&amp;hellip; as seen above.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">browser</span> <span class="o">=</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">config</span><span class="p">.</span><span class="nx">json</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">// Login, then create some content&amp;hellip;</span>
+</span><span class='line'><span class="nx">async</span><span class="p">.</span><span class="nx">series</span><span class="p">([</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">login</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">createMultipleContent</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">nodes</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;))</span>
+</span><span class='line'><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">We</span> <span class="nx">are</span> <span class="nx">done</span><span class="o">!&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Extending</h2>
+
+<p>This library is super easy to extend and create your own Drupal processes. You can do so by simply attaching them to the Drupal object and then they can be utilized with drupal.go like other processes. Here is an example.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">async</span> <span class="o">=</span>     <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">async</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">drupal</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">drupalgo</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">// Add a new task to edit the node.</span>
+</span><span class='line'><span class="nx">drupal</span><span class="p">.</span><span class="nx">editNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">async</span><span class="p">.</span><span class="nx">series</span><span class="p">([</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">this</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;visit&#39;</span><span class="p">,</span> <span class="s1">&#39;node/1234/edit&#39;</span><span class="p">),</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">,</span> <span class="s1">&#39;#edit-title&#39;</span><span class="p">,</span> <span class="s1">&#39;Something else!&#39;</span><span class="p">),</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;pressButton&#39;</span><span class="p">,</span> <span class="s1">&#39;#edit-submit&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">],</span> <span class="nx">done</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">// Load the config.json file&amp;hellip; as seen above.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">browser</span> <span class="o">=</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">config</span><span class="p">.</span><span class="nx">json</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">// Login, then create some content, then EDIT A NODE!&amp;hellip;</span>
+</span><span class='line'><span class="nx">async</span><span class="p">.</span><span class="nx">series</span><span class="p">([</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">login</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">createMultipleContent</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">nodes</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;)),</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">editNode</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;)</span>
+</span><span class='line'><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">We</span> <span class="nx">are</span> <span class="nx">done</span><span class="o">!&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Happy Automating&hellip;.</p>
+]]></content>
+  </entry>
+  
+</feed>

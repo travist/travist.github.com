@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Rope Maze - Travis Tidwell</title>
+  <meta name="author" content="Travis Tidwell">
+
+  
+  <meta name="description" content="Today I went to the Science Museum of Oklahoma
+and was very intrigued by a rope maze puzzle they had there. This puzzle was basically
+a layout of 5 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://travistidwell.com/blog/2011/04/10/rope-maze">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Travis Tidwell" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-450670-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Travis Tidwell</a></h1>
+  
+    <h2>Web technology, software, and everything else that bores my wife..</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:travistidwell.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div style="margin-left: 86px; height: 90px; padding: 10px 0 10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- frontpage banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="9043467163"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style="padding-top: 0px">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Rope Maze</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-10T13:58:00-05:00" pubdate data-updated="true">Apr 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Today I went to the <a href="http://www.sciencemuseumok.org">Science Museum of Oklahoma</a>
+and was very intrigued by a rope maze puzzle they had there. This puzzle was basically
+a layout of 5 different rooms with doors between each room, and connected to this puzzle
+was a rope.  The challenge said to use the rope to weave through all of the open doors
+and do not let the rope cross each other.  The goal was to go through all of the doors.
+I approached this problem like any software engineer would and went home and wrote a
+program that would solve the problem for me.  I did it in HTML, CSS, and JavaScript.</p>
+
+<!-- more -->
+
+
+<p>Below is the result of this effort.</p>
+
+<iframe src="http://travistidwell.com/ropemaze/ropemaze.html" width="100%" height="600px" frameborder="0"></iframe>
+
+
+<h2>The code</h2>
+
+<p>The source code for this endeavor can be found at <a href="https://github.com/travist/ropemaze">https://github.com/travist/ropemaze</a>, but here
+is what the javascript ended up looking like.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">maze</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s1">&#39;outside&#39;</span><span class="o">:</span><span class="p">{</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_nw&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_nw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_nw_n&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_n&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_ne&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_ne&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_ne_n&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_n&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_en&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_ne&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_ne_e&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_e&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_es&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_se&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_se_e&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_se_e&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_se&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_se&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_se_s&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_se_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_s&#39;</span> <span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_s&#39;</span> <span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_s_s&#39;</span><span class="p">},</span> <span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_s_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_sw&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_sw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_sw_s&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_sw_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_ws&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_sw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_sw_w&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_sw_w&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_out_wn&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_nw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_nw_w&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_w&#39;</span><span class="p">)}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s1">&#39;room_nw&#39;</span><span class="o">:</span><span class="p">{</span>
+</span><span class='line'>      <span class="s1">&#39;door_nw_n&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_nw&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_n&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_nw_e&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_ne&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_ne_w&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_e&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_nw_s&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_sw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_sw_n&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_nw_w&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_wn&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_w&#39;</span><span class="p">)}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s1">&#39;room_ne&#39;</span><span class="o">:</span><span class="p">{</span>
+</span><span class='line'>      <span class="s1">&#39;door_ne_n&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_ne&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_n&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_ne_e&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_en&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_e&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_ne_se&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_se&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_se_n&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_se&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_ne_sw&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_s&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_s_ne&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_sw&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_ne_w&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_nw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_nw_e&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_e&#39;</span><span class="p">)}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s1">&#39;room_se&#39;</span><span class="o">:</span><span class="p">{</span>
+</span><span class='line'>      <span class="s1">&#39;door_se_n&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_ne&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_ne_se&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_se&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_se_e&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_es&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_se_e&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_se_s&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_se&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_se_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_se_w&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_s&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_s_e&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_se_w&#39;</span><span class="p">)}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s1">&#39;room_s&#39;</span><span class="o">:</span><span class="p">{</span>
+</span><span class='line'>      <span class="s1">&#39;door_s_n&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_ne&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_ne_sw&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_ne_sw&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_s_e&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_se&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_se_w&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_se_w&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_s_s&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_s&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_s_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_s_w&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_sw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_sw_e&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_sw_e&#39;</span><span class="p">)}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s1">&#39;room_sw&#39;</span><span class="o">:</span><span class="p">{</span>
+</span><span class='line'>      <span class="s1">&#39;door_sw_n&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_nw&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_nw_sw&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_nw_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_sw_e&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;room_s&#39;</span><span class="p">,</span> <span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_s_w&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_sw_e&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_sw_s&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_sw&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_sw_s&#39;</span><span class="p">)},</span>
+</span><span class='line'>      <span class="s1">&#39;door_sw_w&#39;</span><span class="o">:</span><span class="p">{</span><span class="nx">to</span><span class="o">:</span><span class="p">{</span><span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span><span class="nx">door</span><span class="o">:</span><span class="s1">&#39;door_out_ws&#39;</span><span class="p">},</span><span class="nx">display</span><span class="o">:</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#door_sw_w&#39;</span><span class="p">)}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#count&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">tries</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#tries&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">crosses</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Get an indexed array of all the doors.</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">doors</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">roomName</span> <span class="k">in</span> <span class="nx">maze</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">doors</span><span class="p">[</span><span class="nx">roomName</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">room</span> <span class="o">=</span> <span class="nx">maze</span><span class="p">[</span><span class="nx">roomName</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">doorName</span> <span class="k">in</span> <span class="nx">room</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">doors</span><span class="p">[</span><span class="nx">roomName</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">doorName</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Build a collision map.</span>
+</span><span class='line'>  <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">roomName</span> <span class="k">in</span> <span class="nx">maze</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">num_doors</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">[</span><span class="nx">roomName</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">num_doors</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">iDoor</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">[</span><span class="nx">roomName</span><span class="p">][</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">for</span><span class="p">(</span><span class="nx">j</span><span class="o">=</span><span class="nx">i</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">num_doors</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">jDoor</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">[</span><span class="nx">roomName</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">crosses</span><span class="p">[</span><span class="nx">iDoor</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nx">jDoor</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="nx">k</span><span class="o">=</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="nx">k</span><span class="o">&lt;</span><span class="nx">j</span><span class="p">;</span> <span class="nx">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">kDoor</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">[</span><span class="nx">roomName</span><span class="p">][</span><span class="nx">k</span><span class="p">];</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">for</span><span class="p">(</span><span class="nx">l</span><span class="o">=</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="nx">l</span><span class="o">&lt;</span><span class="nx">num_doors</span><span class="p">;</span> <span class="nx">l</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">lDoor</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">[</span><span class="nx">roomName</span><span class="p">][</span><span class="nx">l</span><span class="p">];</span>
+</span><span class='line'>            <span class="nx">crosses</span><span class="p">[</span><span class="nx">iDoor</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nx">jDoor</span><span class="p">][</span><span class="nx">kDoor</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nx">lDoor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">rooms</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>  <span class="nx">rooms</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">fromDoor</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">toDoor</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">room</span><span class="o">:</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tried</span><span class="o">:</span><span class="p">{}</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Checks to see if this path crosses with any prevoious path.</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">doesCross</span><span class="p">(</span> <span class="nx">fromDoor</span><span class="p">,</span> <span class="nx">toDoor</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">path1</span> <span class="o">=</span> <span class="nx">fromDoor</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nx">toDoor</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">path2</span> <span class="o">=</span> <span class="nx">toDoor</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nx">fromDoor</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">retVal</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">step</span> <span class="k">in</span> <span class="nx">rooms</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">room</span> <span class="o">=</span> <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">];</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">temp1</span> <span class="o">=</span> <span class="nx">room</span><span class="p">.</span><span class="nx">fromDoor</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nx">room</span><span class="p">.</span><span class="nx">toDoor</span><span class="p">;</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">temp2</span> <span class="o">=</span> <span class="nx">room</span><span class="p">.</span><span class="nx">toDoor</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nx">room</span><span class="p">.</span><span class="nx">fromDoor</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">path1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">path1</span><span class="p">][</span><span class="nx">temp1</span><span class="p">])</span> <span class="o">||</span>
+</span><span class='line'>        <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">path2</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">path2</span><span class="p">][</span><span class="nx">temp1</span><span class="p">])</span> <span class="o">||</span>
+</span><span class='line'>        <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">path1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">path1</span><span class="p">][</span><span class="nx">temp2</span><span class="p">])</span> <span class="o">||</span>
+</span><span class='line'>        <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">path2</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">path2</span><span class="p">][</span><span class="nx">temp2</span><span class="p">])</span> <span class="o">||</span>
+</span><span class='line'>        <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">temp1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">temp1</span><span class="p">][</span><span class="nx">path1</span><span class="p">])</span> <span class="o">||</span>
+</span><span class='line'>        <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">temp2</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">temp2</span><span class="p">][</span><span class="nx">path1</span><span class="p">])</span> <span class="o">||</span>
+</span><span class='line'>        <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">temp1</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">temp1</span><span class="p">][</span><span class="nx">path2</span><span class="p">])</span> <span class="o">||</span>
+</span><span class='line'>        <span class="p">(</span><span class="nx">crosses</span><span class="p">[</span><span class="nx">temp2</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">crosses</span><span class="p">[</span><span class="nx">temp2</span><span class="p">][</span><span class="nx">path2</span><span class="p">])</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">retVal</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">retVal</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Find a door.</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">findDoor</span><span class="p">(</span> <span class="nx">step</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">door</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">room</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">toDoor</span> <span class="k">in</span> <span class="nx">maze</span><span class="p">[</span><span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">room</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">thisDoor</span> <span class="o">=</span> <span class="nx">maze</span><span class="p">[</span><span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">room</span><span class="p">][</span><span class="nx">toDoor</span><span class="p">];</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span> <span class="nx">thisDoor</span> <span class="o">&amp;&amp;</span>
+</span><span class='line'>            <span class="o">!</span><span class="nx">thisDoor</span><span class="p">.</span><span class="nx">display</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;entered&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+</span><span class='line'>            <span class="o">!</span><span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">tried</span><span class="p">[</span><span class="nx">toDoor</span><span class="p">]</span> <span class="o">&amp;&amp;</span>
+</span><span class='line'>            <span class="o">!</span><span class="nx">doesCross</span><span class="p">(</span><span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">fromDoor</span><span class="p">,</span><span class="nx">toDoor</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">door</span> <span class="o">=</span> <span class="nx">thisDoor</span><span class="p">;</span>
+</span><span class='line'>          <span class="nx">door</span><span class="p">.</span><span class="nx">display</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">step</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;tried&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;entered&quot;</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">toDoor</span> <span class="o">=</span> <span class="nx">toDoor</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">door</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">step</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">numTries</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">running</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Step our maze forward one step.</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">stepForward</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">door</span> <span class="o">=</span> <span class="nx">findDoor</span><span class="p">(</span><span class="nx">step</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="nx">door</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// Enter this door.</span>
+</span><span class='line'>      <span class="nx">step</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">tried</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">door</span> <span class="o">=</span> <span class="nx">door</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">fromDoor</span> <span class="o">=</span> <span class="nx">door</span><span class="p">.</span><span class="nx">to</span><span class="p">.</span><span class="nx">door</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">room</span> <span class="o">=</span> <span class="nx">door</span><span class="p">.</span><span class="nx">to</span><span class="p">.</span><span class="nx">room</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">tries</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="o">++</span><span class="nx">numTries</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// Step back and try again...</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">tried</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">door</span><span class="p">.</span><span class="nx">display</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;entered&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;tried&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">step</span><span class="o">--</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">tried</span><span class="p">[</span><span class="nx">rooms</span><span class="p">[</span><span class="nx">step</span><span class="p">].</span><span class="nx">toDoor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#nextstep&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">stepForward</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#run&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">running</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span> <span class="nx">running</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">stepForward</span><span class="p">();</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">doorCount</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.door.entered&quot;</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">count</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">doorCount</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span> <span class="nx">doorCount</span> <span class="o">!=</span> <span class="mi">15</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">setTimeout</span><span class="p">(</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">callee</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">})();</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#stop&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">running</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Travis Tidwell</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-10T13:58:00-05:00" pubdate data-updated="true">Apr 10<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/fun/'>fun</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://travistidwell.com/blog/2011/04/10/rope-maze/" data-via="softwaregnome" data-counturl="http://travistidwell.com/blog/2011/04/10/rope-maze/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/05/15/minplayer/" title="Next Post: minPlayer: A minimalistic, plugin-based 'core' media player for the web">minPlayer: A minimalistic, plugin-based 'core' media player for the web &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <div style="margin-left: 50px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="8472459164"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/26/coder-soundtrack-volume-3/">Coder Soundtrack Volume 3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/06/an-online-rsa-public-and-private-key-generator/">An online RSA public and private key generator</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/sudo-make-me-a-sandwich/">sudo make me a sandwich... Literally!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/16/coder-soundtrack-volume-2/">Coder Soundtrack volume 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/05/using-phantomjs-with-nodejs/">Using Phantom.js with Node.js</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/travist">@travist</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'travist',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/114268766810402115376?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Travis Tidwell -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'travistidwell';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://travistidwell.com/blog/2011/04/10/rope-maze/';
+        var disqus_url = 'http://travistidwell.com/blog/2011/04/10/rope-maze/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

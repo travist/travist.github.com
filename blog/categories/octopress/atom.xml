@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | Travis Tidwell]]></title>
+  <link href="http://travistidwell.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://travistidwell.com/"/>
+  <updated>2014-03-26T21:49:23-05:00</updated>
+  <id>http://travistidwell.com/</id>
+  <author>
+    <name><![CDATA[Travis Tidwell]]></name>
+    <email><![CDATA[travist349@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My new blog using Octopress]]></title>
+    <link href="http://travistidwell.com/blog/2013/05/02/my-new-blog-using-octopress/"/>
+    <updated>2013-05-02T14:36:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/05/02/my-new-blog-using-octopress</id>
+    <content type="html"><![CDATA[<p><img class="left <a" src="href="http://weedygarden.net/images/2013/octopress.png">http://weedygarden.net/images/2013/octopress.png</a>" title="Octopress" > Today I am launching my website using a new technology that REALLY excites me.  For
+starters, this blog is built using the <a href="http://jekyllrb.com/">Jekyll</a> system, which is basically a static
+website generator but allows you to install plugins, create layouts, as well as many
+other features that keep you from repeating yourself when building a website (DRY).</p>
+
+<p>In addition to Jekyll, this blog is built using a technology that sits on top of
+Jekyll called <a href="http://octopress.org/">Octopress</a>, which simply provides a framework for
+building technology blogs&hellip; or in other words, it is a blogging engine for Nerds.  Amazing stuff
+and I hope this enables me to easily add my thoughts from the past and the future.</p>
+
+<!-- more -->
+
+
+<p>And then finally, I cannot forget <a href="http://pages.github.com/">Github Pages</a>. I am in love
+with Github and when they introduced this capability, it just solidified my allegiance to
+this company. If you haven&rsquo;t had a chance to see this technology, then I highly recommend
+checking it out.</p>
+]]></content>
+  </entry>
+  
+</feed>

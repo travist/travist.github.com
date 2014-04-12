@@ -11,7 +11,7 @@ iFrames is a great example of a wonderful web technology that is shunned today b
 So, what is it about iFrames that people have a sour opinion?  Well, for one thing, they can be abused, and unfortunately people LOVE to abuse iframes. My rule of thumb is this...
 __Do not use an iframes to encapsulate an iterface that changes context__.  What I mean by this is you should not use an iframe if the page you are iframing has the capability of navigating a person away from a single purpose (like iframing all of https://youtube.com vs. just iframing a single video in YouTube).
 
-Another problem with iframes is that they are kind of hard to work with... As it turns out, trying to create an iframe that appears to your visitor as a single seamless interface is not an easy thing to do. For this reason, I decided to create a single library that does all of the hard work for you. It is called [https://github.com/travist/seamless.js](Seamless.js) and I hope you like it.
+Another problem with iframes is that they are kind of hard to work with... As it turns out, trying to create an iframe that appears to your visitor as a single seamless interface is not an easy thing to do. For this reason, I decided to create a single library that does all of the hard work for you. It is called [Seamless.js](http://travistidwell.com/seamless.js/index.html) and I hope you like it.
 
 Click on these links to check out Seamless.js:
 

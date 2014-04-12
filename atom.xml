@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2014-04-11T23:12:04-05:00</updated>
+  <updated>2014-04-11T23:15:02-05:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -27,7 +27,7 @@ iFrames is a great example of a wonderful web technology that is shunned today b
 <p>So, what is it about iFrames that people have a sour opinion?  Well, for one thing, they can be abused, and unfortunately people LOVE to abuse iframes. My rule of thumb is this&hellip;
 <strong>Do not use an iframes to encapsulate an iterface that changes context</strong>.  What I mean by this is you should not use an iframe if the page you are iframing has the capability of navigating a person away from a single purpose (like iframing all of <a href="https://youtube.com">https://youtube.com</a> vs. just iframing a single video in YouTube).</p>
 
-<p>Another problem with iframes is that they are kind of hard to work with&hellip; As it turns out, trying to create an iframe that appears to your visitor as a single seamless interface is not an easy thing to do. For this reason, I decided to create a single library that does all of the hard work for you. It is called <a href="Seamless.js">https://github.com/travist/seamless.js</a> and I hope you like it.</p>
+<p>Another problem with iframes is that they are kind of hard to work with&hellip; As it turns out, trying to create an iframe that appears to your visitor as a single seamless interface is not an easy thing to do. For this reason, I decided to create a single library that does all of the hard work for you. It is called <a href="http://travistidwell.com/seamless.js/index.html">Seamless.js</a> and I hope you like it.</p>
 
 <p>Click on these links to check out Seamless.js:</p>
 

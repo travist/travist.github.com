@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2014-03-26T21:50:38-05:00</updated>
+  <updated>2014-04-11T22:14:40-05:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -113,7 +113,7 @@ to while I code.  I hope you enjoy&hellip;</p>
     <link href="http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs/"/>
     <updated>2013-07-05T14:40:00-05:00</updated>
     <id>http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://phantomjs.org/images/phantomjs-logo.png" title="PhantomJS" > Recently, I have had much interest in building web automation and testing tools
+    <content type="html"><![CDATA[<p><img class="left" src="http://phantomjs.org/img/phantomjs-logo.png" title="PhantomJS" > Recently, I have had much interest in building web automation and testing tools
 using Node.js.  The challenge, however, is when using Node.js for building tests
 and automation, your options are pretty slim when picking your headless browser.
 While <a href="http://zombie.labnotes.org/">Zombie.js</a> is a decent browser, it

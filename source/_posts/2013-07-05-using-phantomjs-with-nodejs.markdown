@@ -5,7 +5,7 @@ date: 2013-07-05 14:40
 comments: true
 categories:
 ---
-{% img left http://phantomjs.org/images/phantomjs-logo.png PhantomJS %} Recently, I have had much interest in building web automation and testing tools
+{% img left http://phantomjs.org/img/phantomjs-logo.png PhantomJS %} Recently, I have had much interest in building web automation and testing tools
 using Node.js.  The challenge, however, is when using Node.js for building tests
 and automation, your options are pretty slim when picking your headless browser.
 While <a href="http://zombie.labnotes.org/">Zombie.js</a> is a decent browser, it

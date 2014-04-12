@@ -5,7 +5,7 @@ date: 2014-04-11 22:31:14 -0500
 comments: true
 categories: 
 ---
-As a web developer, one of the things that I have learned to deal with is that old conventions should NOT apply to modern practices.
+As a web developer, one of the things that I have learned is that old conventions should NOT apply to modern practices.
 iFrames is a great example of a wonderful web technology that is shunned today based on old impressions and existing bad practices. But, when it comes to iframes, you should not base your impressions off of the applications of that technology, but off of the technology itself.  And as it turns out, iFrames are amazing if used correctly.
 <!-- more -->
 So, what is it about iFrames that people have a sour opinion?  Well, for one thing, they can be abused, and unfortunately people LOVE to abuse iframes. My rule of thumb is this...

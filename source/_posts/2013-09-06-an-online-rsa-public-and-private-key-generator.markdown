@@ -23,4 +23,4 @@ anyone can modify this website to make it better.
 
 And here is an iframe of the RSA key generation tool.
 
-<iframe src="http://travistidwell.com/jsencrypt/demo/index.html" width="100%" height="1200px" frameborder="0"></iframe>
+<iframe src="http://travistidwell.com/jsencrypt/demo/index.html" width="100%" height="1560px" frameborder="0"></iframe>

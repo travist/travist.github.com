@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2014-06-11T22:10:48-05:00</updated>
+  <updated>2014-06-11T22:12:39-05:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -24,7 +24,7 @@ range&hellip; how would you do that?  While there are many plugin utilities out 
 rarely will you find a utility that is able to generate the report you need at all times.</p>
 
 <p>One thing that many people do not realize is that within GIT you can easily pipe the log to another application and
-quite literally build your won reports from within the command line.  One of the more powerful applications that you
+quite literally build your own reports from within the command line.  One of the more powerful applications that you
 can utilize is AWK, which allows you to write some code that parses through a log to generate a report to your needs.</p>
 
 <p>Here are a few that I created to give you an idea of what you can do with this technique.</p>

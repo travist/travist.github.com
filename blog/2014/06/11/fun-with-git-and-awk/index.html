@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Fun with GIT and AWK - Travis Tidwell</title>
+  <meta name="author" content="Travis Tidwell">
+
+  
+  <meta name="description" content="For those of you who use GIT, you have probably noticed that while it is an incredibly powerful tool, one area that it
+could use some help is &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Travis Tidwell" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-450670-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Travis Tidwell</a></h1>
+  
+    <h2>Web technology, software, and everything else that bores my wife..</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:travistidwell.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div style="margin-left: 86px; height: 90px; padding: 10px 0 10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- frontpage banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="9043467163"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style="padding-top: 0px">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Fun With GIT and AWK</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-11T21:53:43-05:00" pubdate data-updated="true">Jun 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>For those of you who use GIT, you have probably noticed that while it is an incredibly powerful tool, one area that it
+could use some help is reporting.  For example, Let&rsquo;s say that I want to determine all changes to a file provided a date
+range&hellip; how would you do that?  While there are many plugin utilities out there that provide reporting to GIT, very
+rarely will you find a utility that is able to generate the report you need at all times.</p>
+
+<p>One thing that many people do not realize is that within GIT you can easily pipe the log to another application and
+quite literally build your won reports from within the command line.  One of the more powerful applications that you
+can utilize is AWK, which allows you to write some code that parses through a log to generate a report to your needs.</p>
+
+<p>Here are a few that I created to give you an idea of what you can do with this technique.</p>
+
+<!-- more -->
+
+
+<p>  <strong>Determine how productive your team has been using git history.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;1 year ago&quot;</span> --until<span class="o">=</span><span class="s2">&quot;now&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;files changed\|Author\|Merge:&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{ \</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Author:&quot;) {\</span>
+</span><span class='line'><span class="s1">      currentUser = $2;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($2 == &quot;files&quot;) {\</span>
+</span><span class='line'><span class="s1">      files[currentUser]+=$1;\</span>
+</span><span class='line'><span class="s1">      inserted[currentUser]+=$4;\</span>
+</span><span class='line'><span class="s1">      deleted[currentUser]+=$6;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  } END {\</span>
+</span><span class='line'><span class="s1">    for (i in files) {\</span>
+</span><span class='line'><span class="s1">      print i &quot;:&quot;, &quot;files changed:&quot;, files[i], &quot;lines inserted:&quot;, inserted[i], &quot;lines deleted:&quot;, deleted[i];\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine all changes to a file provided a date range in GIT.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;3 weeks ago&quot;</span> --until<span class="o">=</span><span class="s2">&quot;now&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;Merge pull request&quot;</span> -B 5<span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1==&quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      output = system(&quot;git diff &quot; $2 &quot;^ &quot; $2 &quot; {YOUR FILE HERE}&quot;);\</span>
+</span><span class='line'><span class="s1">      if (output) {\</span>
+</span><span class='line'><span class="s1">        print output;\</span>
+</span><span class='line'><span class="s1">      }\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine the diff provided a Pivotal Tracker Story ID.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log<span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;Merge pull request.*{INSERT STORY ID HERE}&quot;</span> -B 5<span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1==&quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      print system(&quot;git diff &quot; $2 &quot;^ &quot; $2);\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine all commits for a developer given a time range.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;2011-9-1&quot;</span> --until<span class="o">=</span><span class="s2">&quot;2011-11-15&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;commit\|Author\|Merge:&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Merge:&quot;) {\</span>
+</span><span class='line'><span class="s1">      merge = 1;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      merge = 0;\</span>
+</span><span class='line'><span class="s1">      commit = $2;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Author:&quot; &amp;&amp; tolower($2) == tolower(&quot;Travis&quot;)) {\</span>
+</span><span class='line'><span class="s1">      if (!merge) {\</span>
+</span><span class='line'><span class="s1">        merge = 0;\</span>
+</span><span class='line'><span class="s1">        print system(&quot;git diff &quot; commit &quot;^ &quot; commit);\</span>
+</span><span class='line'><span class="s1">      }\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I hope everyone finds this useful.  Now use the comments to share your own GIT with AWK magic!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Travis Tidwell</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-11T21:53:43-05:00" pubdate data-updated="true">Jun 11<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk/" data-via="softwaregnome" data-counturl="http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/11/working-with-seamless-iframes/" title="Previous Post: Working with Seamless iFrames">&laquo; Working with Seamless iFrames</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <div style="margin-left: 50px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="8472459164"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/11/fun-with-git-and-awk/">Fun with GIT and AWK</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/working-with-seamless-iframes/">Working with Seamless iFrames</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/26/coder-soundtrack-volume-3/">Coder Soundtrack Volume 3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/06/an-online-rsa-public-and-private-key-generator/">An online RSA public and private key generator</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/sudo-make-me-a-sandwich/">sudo make me a sandwich... Literally!</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/travist">@travist</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'travist',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/114268766810402115376?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Travis Tidwell -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'travistidwell';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk/';
+        var disqus_url = 'http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

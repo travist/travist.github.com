@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2014-05-23T16:27:51-05:00</updated>
+  <updated>2014-06-11T22:10:48-05:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -12,6 +12,149 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fun with GIT and AWK]]></title>
+    <link href="http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk/"/>
+    <updated>2014-06-11T21:53:43-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk</id>
+    <content type="html"><![CDATA[<p>For those of you who use GIT, you have probably noticed that while it is an incredibly powerful tool, one area that it
+could use some help is reporting.  For example, Let&rsquo;s say that I want to determine all changes to a file provided a date
+range&hellip; how would you do that?  While there are many plugin utilities out there that provide reporting to GIT, very
+rarely will you find a utility that is able to generate the report you need at all times.</p>
+
+<p>One thing that many people do not realize is that within GIT you can easily pipe the log to another application and
+quite literally build your won reports from within the command line.  One of the more powerful applications that you
+can utilize is AWK, which allows you to write some code that parses through a log to generate a report to your needs.</p>
+
+<p>Here are a few that I created to give you an idea of what you can do with this technique.</p>
+
+<!-- more -->
+
+
+<p>  <strong>Determine how productive your team has been using git history.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;1 year ago&quot;</span> --until<span class="o">=</span><span class="s2">&quot;now&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;files changed\|Author\|Merge:&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{ \</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Author:&quot;) {\</span>
+</span><span class='line'><span class="s1">      currentUser = $2;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($2 == &quot;files&quot;) {\</span>
+</span><span class='line'><span class="s1">      files[currentUser]+=$1;\</span>
+</span><span class='line'><span class="s1">      inserted[currentUser]+=$4;\</span>
+</span><span class='line'><span class="s1">      deleted[currentUser]+=$6;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  } END {\</span>
+</span><span class='line'><span class="s1">    for (i in files) {\</span>
+</span><span class='line'><span class="s1">      print i &quot;:&quot;, &quot;files changed:&quot;, files[i], &quot;lines inserted:&quot;, inserted[i], &quot;lines deleted:&quot;, deleted[i];\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine all changes to a file provided a date range in GIT.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;3 weeks ago&quot;</span> --until<span class="o">=</span><span class="s2">&quot;now&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;Merge pull request&quot;</span> -B 5<span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1==&quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      output = system(&quot;git diff &quot; $2 &quot;^ &quot; $2 &quot; {YOUR FILE HERE}&quot;);\</span>
+</span><span class='line'><span class="s1">      if (output) {\</span>
+</span><span class='line'><span class="s1">        print output;\</span>
+</span><span class='line'><span class="s1">      }\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine the diff provided a Pivotal Tracker Story ID.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log<span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;Merge pull request.*{INSERT STORY ID HERE}&quot;</span> -B 5<span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1==&quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      print system(&quot;git diff &quot; $2 &quot;^ &quot; $2);\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine all commits for a developer given a time range.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;2011-9-1&quot;</span> --until<span class="o">=</span><span class="s2">&quot;2011-11-15&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;commit\|Author\|Merge:&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Merge:&quot;) {\</span>
+</span><span class='line'><span class="s1">      merge = 1;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      merge = 0;\</span>
+</span><span class='line'><span class="s1">      commit = $2;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Author:&quot; &amp;&amp; tolower($2) == tolower(&quot;Travis&quot;)) {\</span>
+</span><span class='line'><span class="s1">      if (!merge) {\</span>
+</span><span class='line'><span class="s1">        merge = 0;\</span>
+</span><span class='line'><span class="s1">        print system(&quot;git diff &quot; commit &quot;^ &quot; commit);\</span>
+</span><span class='line'><span class="s1">      }\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I hope everyone finds this useful.  Now use the comments to share your own GIT with AWK magic!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Working with Seamless iFrames]]></title>

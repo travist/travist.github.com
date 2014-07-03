@@ -83,7 +83,7 @@ resolution AVI format. To do this, you will need FFMPEG.
 We are now ready to start transcoding!  To transcode any of your vidoes, simply navigate to the directory that contains your video
 and then type the following command.
 {% codeblock lang:bash %}
-  ffmpeg -i Ratatouille.mp4 -c:v mpeg4 -vtag xvid -qscale:v 6 -c:a libmp3lame -qscale:a 6 -vf scale=480:-1 Ratatouille.avi
+  ffmpeg -i Ratatouille.mp4 -c:v mpeg4 -vtag xvid -qscale:v 2 -c:a libmp3lame -qscale:a 6 -vf scale=480:-1 Ratatouille.avi
 {% endcodeblock %}
 
 You will need to change your command to take the name of your video (For me that was _Ratatouille.mp4_), and then also provide the name of the
@@ -105,7 +105,7 @@ for FILE in *.*; do
     echo "Converting ${FILE}"
     OUTPUT=$(basename "$FILE")
     OUTPUT="./encoded/${OUTPUT%.*}.avi"
-    ffmpeg -y -i "${FILE}" -c:v mpeg4 -vtag xvid -qscale:v 6 -c:a libmp3lame -qscale:a 6 -vf scale=480:-1 "${OUTPUT}"
+    ffmpeg -y -i "${FILE}" -c:v mpeg4 -vtag xvid -qscale:v 2 -c:a libmp3lame -qscale:a 6 -vf scale=480:-1 "${OUTPUT}"
   fi
 done
 {% endcodeblock %}

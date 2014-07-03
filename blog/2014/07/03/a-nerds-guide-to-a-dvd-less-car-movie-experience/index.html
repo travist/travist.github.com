@@ -228,7 +228,7 @@ by typing the following in your command prompt.</li>
 and then type the following command.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>  ffmpeg -i Ratatouille.mp4 -c:v mpeg4 -vtag xvid -qscale:v 6 -c:a libmp3lame -qscale:a 6 -vf <span class="nv">scale</span><span class="o">=</span>480:-1 Ratatouille.avi
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  ffmpeg -i Ratatouille.mp4 -c:v mpeg4 -vtag xvid -qscale:v 2 -c:a libmp3lame -qscale:a 6 -vf <span class="nv">scale</span><span class="o">=</span>480:-1 Ratatouille.avi
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -262,7 +262,7 @@ and then place it inside of the directory with your videos.  The contents of thi
 </span><span class='line'><span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Converting ${FILE}&quot;</span>
 </span><span class='line'>    <span class="nv">OUTPUT</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&quot;$FILE&quot;</span><span class="k">)</span>
 </span><span class='line'>    <span class="nv">OUTPUT</span><span class="o">=</span><span class="s2">&quot;./encoded/${OUTPUT%.*}.avi&quot;</span>
-</span><span class='line'>    ffmpeg -y -i <span class="s2">&quot;${FILE}&quot;</span> -c:v mpeg4 -vtag xvid -qscale:v 6 -c:a libmp3lame -qscale:a 6 -vf <span class="nv">scale</span><span class="o">=</span>480:-1 <span class="s2">&quot;${OUTPUT}&quot;</span>
+</span><span class='line'>    ffmpeg -y -i <span class="s2">&quot;${FILE}&quot;</span> -c:v mpeg4 -vtag xvid -qscale:v 2 -c:a libmp3lame -qscale:a 6 -vf <span class="nv">scale</span><span class="o">=</span>480:-1 <span class="s2">&quot;${OUTPUT}&quot;</span>
 </span><span class='line'>  <span class="k">fi</span>
 </span><span class='line'><span class="k">done</span>
 </span></code></pre></td></tr></table></div></figure>

@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2014-10-17T15:29:24-05:00</updated>
+  <updated>2014-10-20T21:58:22-05:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When to NOT use Drupal]]></title>
+    <link href="http://travistidwell.com/blog/2014/10/20/when-to-not-use-drupal/"/>
+    <updated>2014-10-20T21:12:05-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/10/20/when-to-not-use-drupal</id>
+    <content type="html"><![CDATA[<p>Today, I gave a presentation to the Drupal Dallas meetup over when to NOT use
+Drupal.  This is in many ways a hard topic to discuss, since as a Drupal fan,
+I want Drupal to be the solution to many web problems. However, it just isn&rsquo;t
+pragmatic in many cases, and the presentation I gave explores this topic.</p>
+
+<p>In short, my challenge is for everyone to stop saying &ldquo;Yeah, Drupal can do that!&rdquo;
+and instead start saying &ldquo;Yeah, Drupal SHOULD do that!&rdquo; and mean it.</p>
+
+<p>I hope you enjoy.</p>
+
+<!-- more -->
+
+
+<h2>Slides</h2>
+
+<ul>
+<li><a href="http://travistidwell.com/presentations/notdrupal">http://travistidwell.com/presentations/notdrupal</a></li>
+</ul>
+
+
+<h2>Video</h2>
+
+<iframe width="100%" height="500px" src="//www.youtube.com/embed/Ya4NotZNc4Y" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Coder Soundtrack Volume 4]]></title>

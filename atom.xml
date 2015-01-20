@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2014-10-20T21:58:22-05:00</updated>
+  <updated>2015-01-20T14:17:23-06:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to build a M.E.A.N web application]]></title>
+    <link href="http://travistidwell.com/blog/2015/01/20/how-to-build-a-mean-web-application/"/>
+    <updated>2015-01-20T09:45:18-06:00</updated>
+    <id>http://travistidwell.com/blog/2015/01/20/how-to-build-a-mean-web-application</id>
+    <content type="html"><![CDATA[<p>Lately I have been really getting into a new web application stack referred to as the M.E.A.N stack. To give you a
+very brief description, the M.E.A.N stack is a full web application stack where JavaScript is used at every layer.
+The acronym stands for the following:</p>
+
+<ul>
+<li>M: <strong>MongoDB</strong> &ndash; A NoSQL database powered by JavaScript.</li>
+<li>E: <strong>ExpressJS</strong> &ndash; A Node.js application framework.</li>
+<li>A: <strong>AngularJS</strong> &ndash; A front-end single-page javascript application framework.</li>
+<li>N: <strong>NodeJS</strong> &ndash; A server-side javascript application engine.</li>
+</ul>
+
+
+<p>This stack has many benefits that caters itself to the new Web 3.0 movement where the Internet of Things is
+radically changing old paradigms on how web applications should be built. For example, the M.E.A.N stack requires a total
+separation between the Front end application and the Backend server via RESTful API&rsquo;s. This provides the ability for
+multiple front end applications to be built on top of a single backend REST service.</p>
+
+<p>When learning how to build a M.E.A.N web application, one thing that frustrated me was the lack of a complete walkthrough
+tutorials on how to build an app within this architecture. I was able to find plenty of documentation over the atomic
+pieces of M.E.A.N (such as plenty of documentation and videos over AngularJS), but it was really up to me to put all the
+pieces together to build an application. I created this presentation and video as a COMPLETE walkthrough on how to get
+your application started.</p>
+
+<p>I hope you enjoy it.</p>
+
+<!-- more -->
+
+
+<h2>Video</h2>
+
+<iframe width="100%" height="500px" src="//www.youtube.com/embed/OhPFgqHz68o" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Presentation</h2>
+
+<p><a href="http://travistidwell.com/presentations/meanapp">http://travistidwell.com/presentations/meanapp</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[When to NOT use Drupal]]></title>

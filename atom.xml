@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2015-01-20T14:17:23-06:00</updated>
+  <updated>2015-10-07T14:46:19-05:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing Form.io: The combined Form and API platform for developers.]]></title>
+    <link href="http://travistidwell.com/blog/2015/10/07/introducing-form-dot-io-the-combined-form-and-api-platform-for-developers/"/>
+    <updated>2015-10-07T14:32:19-05:00</updated>
+    <id>http://travistidwell.com/blog/2015/10/07/introducing-form-dot-io-the-combined-form-and-api-platform-for-developers</id>
+    <content type="html"><![CDATA[<p>I am very excited to talk to you about a new project that I have been working on called <a target="_blank" href="https://form.io">&lt;form.io&gt;</a>. As a quick introduction, Form.io is the first combined Form and API platform built specifically for Developers. It provides them an easy to use drag-and-drop form builder interface that not only creates forms that can be embedded within their applications, but also automatically generates a RESTful API to support them. Take a look at this 2 minute video to get a better idea of this amazing technology, and enjoy Form.io!</p>
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/hrggvEniXFI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to build a M.E.A.N web application]]></title>

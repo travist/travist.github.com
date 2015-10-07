@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sencha | Travis Tidwell]]></title>
+  <link href="http://travistidwell.com/blog/categories/sencha/atom.xml" rel="self"/>
+  <link href="http://travistidwell.com/"/>
+  <updated>2015-01-20T14:17:23-06:00</updated>
+  <id>http://travistidwell.com/</id>
+  <author>
+    <name><![CDATA[Travis Tidwell]]></name>
+    <email><![CDATA[travist349@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Drupal with Sencha Touch]]></title>
+    <link href="http://travistidwell.com/blog/2013/06/18/mobile-drupal-with-sencha-touch/"/>
+    <updated>2013-06-18T14:36:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/06/18/mobile-drupal-with-sencha-touch</id>
+    <content type="html"><![CDATA[<p><img class="left <a" src="href="http://www.sencha.com/img/sencha-large.png">http://www.sencha.com/img/sencha-large.png</a>" title="Sencha Touch" > Yesterday, I gave a presentation
+to the Drupal Dallas Group over a technology that I have been really interested in lately called
+<a href="http://www.sencha.com/products/touch">Sencha Touch</a>.  Basically, this technology allows you to
+create a mobile application using an MVC web application framework based off of ExtJS.  What is
+even more exciting is when you pair this technology with the <a href="http://drupal.org">Drupal CMS</a> as a backend service
+for this mobile framework.  The result is something very exciting.</p>
+
+<!-- more -->
+
+
+<h2>Presentation Slides</h2>
+
+<ul>
+<li><a href="http://travistidwell.com/presentations/drupal-sencha">http://travistidwell.com/presentations/drupal-sencha</a></li>
+<li><a href="https://github.com/travist/presentations/tree/master/drupal-sencha">https://github.com/travist/presentations/tree/master/drupal-sencha</a></li>
+</ul>
+
+
+<iframe width="100%" height="500px" src="http://www.youtube.com/embed/6JQJSGOMFEM" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+</feed>

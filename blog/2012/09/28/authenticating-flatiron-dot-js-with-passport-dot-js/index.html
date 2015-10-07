@@ -1,0 +1,653 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Authenticating Flatiron.js with Passport.js - Travis Tidwell</title>
+  <meta name="author" content="Travis Tidwell">
+
+  
+  <meta name="description" content="So, I have fallen in love with Flatiron.js. For those who
+are not familiar with this framework, it is basically an application framework for
+Node.js &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://travistidwell.com/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Travis Tidwell" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-450670-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Travis Tidwell</a></h1>
+  
+    <h2>Web technology, software, and everything else that bores my wife..</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:travistidwell.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div style="margin-left: 86px; height: 90px; padding: 10px 0 10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- frontpage banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="9043467163"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style="padding-top: 0px">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Authenticating Flatiron.js With Passport.js</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-28T19:13:00-05:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>So, I have fallen in love with <a href="http://flatironjs.org">Flatiron.js</a>.  For those who
+are not familiar with this framework, it is basically an application framework for
+Node.js.  Obviously, it isn&rsquo;t the only framework out there, but I would like to argue
+that it is THE ONLY framework doing things right with JavaScript on the server side.
+My reasons for this statement are backed by how it utilizes <strong>RVP</strong> instead
+of <strong>MVC</strong> considering the isomorphic nature of Server-side to Client-side
+libraries.  For more foundation to this statement, please read <a href="http://blog.nodejitsu.com/scaling-isomorphic-javascript-code">Scaling Isomorphic Javascript Code</a>;
+it is a fantastic read.</p>
+
+<p>Regardless, one of my major complaints with Flatiron.js was that it lacks in OAuth.
+Looking around the Node.js community, there is a clear winner when it comes to OAuth, which
+is <a href="http://passportjs.org">Passport.js</a>. But, there is a problem&hellip; Passport.js was
+built on top of the <a href="http://expressjs.com">Express.js</a> applicaton framework and not Flatiron.js.
+Although, Express.js libraries are <a href="http://www.senchalabs.org/connect">Connect.js</a> compatible,
+and Flatiron.js is also Connect.js compatible, this isn&rsquo;t enough to provide a clean
+integration between Passport.js and Flatiron.js.  So, to solve this issue, I created
+a library that takes care of the integration work for you.  It is called <a href="https://github.com/travist/flatiron-passport">Flatiron Passport</a>,
+and I would love for you to check it out&hellip;</p>
+
+<!-- more -->
+
+
+<p>Here is the readme from this library&hellip;</p>
+
+<h2>Passport.js integration for FlatIron web framework.</h2>
+
+<p>This package allows <a href="http://flatironjs.org">Flatiron.js</a> applications to easily use the
+<a href="http://passportjs.org">Passport.js</a> authentication framework.</p>
+
+<p>There are only two things that are different between using this API and using the regular Passport API.</p>
+
+<p>1.) Instead of calling&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">passport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;passport&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span><span class='line'><span class="c1">// ... BOILERPLATE SETUP CODE GOES HERE ...</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">passport</span><span class="p">.</span><span class="nx">initialize</span><span class="p">());</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">passport</span><span class="p">.</span><span class="nx">session</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You simply need to call&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span>      <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fipassport</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron-passport&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span>           <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// ... BOILERPLATE SETUP CODE GOES HERE ...</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">fipassport</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.) Now anywhere you would use the variable passport, you replace that with fipassport in your app, like so&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="k">new</span> <span class="nx">LocalStrategy</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">serializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">deserializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(.....)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You simply call this instead&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="k">new</span> <span class="nx">LocalStrategy</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">serializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">deserializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(.....)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Please refer to the included example to get a better idea&hellip;.</p>
+
+<h3>Install</h3>
+
+<div>
+  <pre><code class='bash'>npm install flatiron-passport</code></pre>
+</div>
+
+
+<h2>Example: From the example folder&hellip;</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span>            <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span>      <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">LocalStrategy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;passport-local&#39;</span><span class="p">).</span><span class="nx">Strategy</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fipassport</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron-passport&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span>           <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// You would not usually have these lines...</span>
+</span><span class='line'><span class="c1">// This is just to store the username in memory.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">global_user</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">global_pass</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Use the passport strategy.</span>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="k">new</span> <span class="nx">LocalStrategy</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// You would not normally have these lines...</span>
+</span><span class='line'>  <span class="c1">// This is just to store it in memory for use later.</span>
+</span><span class='line'>  <span class="nx">global_user</span> <span class="o">=</span> <span class="nx">username</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">global_pass</span> <span class="o">=</span> <span class="nx">password</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Use this as you normally would in Passport.js.</span>
+</span><span class='line'>  <span class="c1">// But for now just</span>
+</span><span class='line'>  <span class="c1">// hard-code the user object.</span>
+</span><span class='line'>  <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">id</span><span class="o">:</span> <span class="mi">1234</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">username</span><span class="o">:</span> <span class="nx">username</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">}));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Serialize based on the user ID.</span>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">serializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// @todo: Save your user to the database using the ID as a key.</span>
+</span><span class='line'>  <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Load the user and return it to passport.</span>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">deserializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// @todo:  Load your user here based off of the ID, and call done with</span>
+</span><span class='line'>  <span class="c1">// that user object.</span>
+</span><span class='line'>  <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">id</span><span class="o">:</span><span class="nx">id</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">username</span><span class="o">:</span><span class="nx">global_user</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">password</span><span class="o">:</span><span class="nx">global_pass</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Use http and flatiron-passport.</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">flatiron</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">http</span><span class="p">);</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">fipassport</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Get the front page.</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">req</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">req</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span><span class='line'>          <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/html&#39;</span><span class="p">});</span>
+</span><span class='line'>        <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">};</span>
+</span><span class='line'>    <span class="p">})(</span><span class="k">this</span><span class="p">));</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Here the API to fipassport.authenticate is the exact same as it would</span>
+</span><span class='line'><span class="cm"> * be fore passport.authenticate.  It is just a simple wrapper around that</span>
+</span><span class='line'><span class="cm"> * function.</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="nx">fipassport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(</span><span class="s1">&#39;local&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">successRedirect</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">failureRedirect</span><span class="o">:</span> <span class="s1">&#39;/login&#39;</span>
+</span><span class='line'><span class="p">}));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Start our server at port 3000.</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;HTTP Server started on port 3000&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Happy Authenticating&hellip;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Travis Tidwell</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-28T19:13:00-05:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://travistidwell.com/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js/" data-via="softwaregnome" data-counturl="http://travistidwell.com/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/05/15/minplayer/" title="Previous Post: minPlayer: A minimalistic, plugin-based 'core' media player for the web">&laquo; minPlayer: A minimalistic, plugin-based 'core' media player for the web</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/02/15/a-better-library-for-javascript-asymmetrical-rsa-encryption/" title="Next Post: A better library for JavaScript Asymmetrical RSA Encryption">A better library for JavaScript Asymmetrical RSA Encryption &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <div style="margin-left: 50px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="8472459164"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/20/how-to-build-a-mean-web-application/">How to build a M.E.A.N web application</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/20/when-to-not-use-drupal/">When to NOT use Drupal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/17/coder-soundtrack-volume-4/">Coder Soundtrack Volume 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/07/03/a-nerds-guide-to-a-dvd-less-car-movie-experience/">A nerds guide to a $100 DVD-less car movie experience</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/11/fun-with-git-and-awk/">Fun with GIT and AWK</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/travist">@travist</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'travist',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/114268766810402115376?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Travis Tidwell -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'travistidwell';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://travistidwell.com/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js/';
+        var disqus_url = 'http://travistidwell.com/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

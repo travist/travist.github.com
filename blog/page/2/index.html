@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Travis Tidwell</title>
+  <meta name="author" content="Travis Tidwell">
+
+  
+  <meta name="description" content="Recently, I have had much interest in building web automation and testing tools
+using Node.js. The challenge, however, is when using Node.js for &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://travistidwell.com/blog/page/2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Travis Tidwell" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-450670-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Travis Tidwell</a></h1>
+  
+    <h2>Web technology, software, and everything else that bores my wife..</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:travistidwell.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/05/using-phantomjs-with-nodejs/">Using Phantom.js With Node.js</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-05T14:40:00-05:00" pubdate data-updated="true">Jul 5<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="left" src="http://phantomjs.org/img/phantomjs-logo.png" title="PhantomJS" > Recently, I have had much interest in building web automation and testing tools
+using Node.js.  The challenge, however, is when using Node.js for building tests
+and automation, your options are pretty slim when picking your headless browser.
+While <a href="http://zombie.labnotes.org/">Zombie.js</a> is a decent browser, it
+uses JSDOM for its layout engine, whereas most of the web is ran on (or based off of) <a href="https://www.webkit.org/">WebKit</a>.  This
+creates problems when trying to formulate accurate tests as well as benefit from
+the ongoing development into the WebKit engine.  What really peaked my interest
+was the project called <a href="http://phantomjs.org">Phantom.js</a> which is
+basically a headless WebKit browser that exposes a JavaScript API to interact with
+the browser.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/05/using-phantomjs-with-nodejs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/18/mobile-drupal-with-sencha-touch/">Mobile Drupal With Sencha Touch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-18T14:36:00-05:00" pubdate data-updated="true">Jun 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="left" src="http://www.sencha.com/img/sencha-large.png" title="Sencha Touch" > Yesterday, I gave a presentation
+to the Drupal Dallas Group over a technology that I have been really interested in lately called
+<a href="http://www.sencha.com/products/touch">Sencha Touch</a>.  Basically, this technology allows you to
+create a mobile application using an MVC web application framework based off of ExtJS.  What is
+even more exciting is when you pair this technology with the <a href="http://drupal.org">Drupal CMS</a> as a backend service
+for this mobile framework.  The result is something very exciting.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/06/18/mobile-drupal-with-sencha-touch/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/02/my-new-blog-using-octopress/">My New Blog Using Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-02T14:36:00-05:00" pubdate data-updated="true">May 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="left" src="http://weedygarden.net/images/2013/octopress.png" title="Octopress" > Today I am launching my website using a new technology that REALLY excites me.  For
+starters, this blog is built using the <a href="http://jekyllrb.com/">Jekyll</a> system, which is basically a static
+website generator but allows you to install plugins, create layouts, as well as many
+other features that keep you from repeating yourself when building a website (DRY).</p>
+
+<p>In addition to Jekyll, this blog is built using a technology that sits on top of
+Jekyll called <a href="http://octopress.org/">Octopress</a>, which simply provides a framework for
+building technology blogs&hellip; or in other words, it is a blogging engine for Nerds.  Amazing stuff
+and I hope this enables me to easily add my thoughts from the past and the future.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/05/02/my-new-blog-using-octopress/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/14/drupalgo/">drupal.go.js: A node.js Package to Automate and Test Drupal Using Zombie.js.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-14T15:45:00-05:00" pubdate data-updated="true">Apr 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I gave my presentation yesterday regarding <a href="blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js">Automating and Testing Drupal with Zombie.js</a>,
+I also introduced a new project that I created which makes it super simple to automate anything
+within the Drupal UI using Zombie.js (which is a completely headless browser implemented in Node.js).
+This project is called <a href="https://github.com/travist/drupal.go.js">drupal.go.js</a> and I am very excited about it.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/04/14/drupalgo/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js/">Automating and Testing Drupal With Zombie.js</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-13T14:18:00-05:00" pubdate data-updated="true">Apr 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I gave a presentation over Automating and Testing Drupal with Zombie.js at the
+<a href="http://drupaldallas.org/">Drupal Dallas Days Conference</a>. I had a blast putting this
+presentation together and I think just as much fun giving it.  I also used the incredible
+library <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> for the first time which is an
+amazing way to build a presentation.  I hope you enjoy it&hellip;</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/15/a-better-library-for-javascript-asymmetrical-rsa-encryption/">A Better Library for JavaScript Asymmetrical RSA Encryption</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-15T22:57:00-06:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am a firm believer that JavaScript will eventually be the ubiquitous coding language
+of the future.  Although there are many objections to this statement, I don&rsquo;t think
+anyone can argue that it is the best poised for ubiquity considering it
+is now used in both server side (<a href="http://nodejs.org">node.js</a>) and obviously client
+side open web standards.  And considering that this language did start out as a &lsquo;toy&rsquo;
+language, I am often amazing at how far it has come in maturity in recent years. There
+is an area where I am most amazed at its progression, and that is with Encryption.  For
+years, this area was pretty much dominated by the C and C++ languages (to which I am
+also a seasoned developer in), but now that JavaScript has made its way to the server,
+it is becoming recognized as a potential contender to this domination.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/02/15/a-better-library-for-javascript-asymmetrical-rsa-encryption/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js/">Authenticating Flatiron.js With Passport.js</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-28T19:13:00-05:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, I have fallen in love with <a href="http://flatironjs.org">Flatiron.js</a>.  For those who
+are not familiar with this framework, it is basically an application framework for
+Node.js.  Obviously, it isn&rsquo;t the only framework out there, but I would like to argue
+that it is THE ONLY framework doing things right with JavaScript on the server side.
+My reasons for this statement are backed by how it utilizes <strong>RVP</strong> instead
+of <strong>MVC</strong> considering the isomorphic nature of Server-side to Client-side
+libraries.  For more foundation to this statement, please read <a href="http://blog.nodejitsu.com/scaling-isomorphic-javascript-code">Scaling Isomorphic Javascript Code</a>;
+it is a fantastic read.</p>
+
+<p>Regardless, one of my major complaints with Flatiron.js was that it lacks in OAuth.
+Looking around the Node.js community, there is a clear winner when it comes to OAuth, which
+is <a href="http://passportjs.org">Passport.js</a>. But, there is a problem&hellip; Passport.js was
+built on top of the <a href="http://expressjs.com">Express.js</a> applicaton framework and not Flatiron.js.
+Although, Express.js libraries are <a href="http://www.senchalabs.org/connect">Connect.js</a> compatible,
+and Flatiron.js is also Connect.js compatible, this isn&rsquo;t enough to provide a clean
+integration between Passport.js and Flatiron.js.  So, to solve this issue, I created
+a library that takes care of the integration work for you.  It is called <a href="https://github.com/travist/flatiron-passport">Flatiron Passport</a>,
+and I would love for you to check it out&hellip;</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/15/minplayer/">minPlayer: A Minimalistic, Plugin-based &#8216;Core&#8217; Media Player for the Web</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-15T15:26:00-05:00" pubdate data-updated="true">May 15<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I would like to introduce my latest media player creation. The <strong><a href="https://github.com/travist/minplayer">minPlayer</a></strong>.
+The idea behind this media player was that I have a lot of experience building web based
+multimedia players, but also noticed that I continually build more and more features into
+them based on clients requests.  Because of this, I have decided to create the concept of
+a &ldquo;core&rdquo; media player whose sole purpose was to only deliver the multimedia experience while
+the more complex features would go inside of another media player I created called the <a href="https://github.com/mediafront/osmplayer">Open Standard Media Player</a>.
+This allows me to keep the core media functionality slim while still being able to extend onto the minPlayer
+class to provide the more advanced features such as Playlists and custom 3rd party integrations.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2011/05/15/minplayer/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/10/rope-maze/">Rope Maze</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-10T13:58:00-05:00" pubdate data-updated="true">Apr 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I went to the <a href="http://www.sciencemuseumok.org">Science Museum of Oklahoma</a>
+and was very intrigued by a rope maze puzzle they had there. This puzzle was basically
+a layout of 5 different rooms with doors between each room, and connected to this puzzle
+was a rope.  The challenge said to use the rope to weave through all of the open doors
+and do not let the rope cross each other.  The goal was to go through all of the doors.
+I approached this problem like any software engineer would and went home and wrote a
+program that would solve the problem for me.  I did it in HTML, CSS, and JavaScript.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2011/04/10/rope-maze/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <div style="margin-left: 50px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="8472459164"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/20/how-to-build-a-mean-web-application/">How to build a M.E.A.N web application</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/20/when-to-not-use-drupal/">When to NOT use Drupal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/17/coder-soundtrack-volume-4/">Coder Soundtrack Volume 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/07/03/a-nerds-guide-to-a-dvd-less-car-movie-experience/">A nerds guide to a $100 DVD-less car movie experience</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/11/fun-with-git-and-awk/">Fun with GIT and AWK</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/travist">@travist</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'travist',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/114268766810402115376?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Travis Tidwell -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'travistidwell';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

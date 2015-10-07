@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: presentations | Travis Tidwell]]></title>
+  <link href="http://travistidwell.com/blog/categories/presentations/atom.xml" rel="self"/>
+  <link href="http://travistidwell.com/"/>
+  <updated>2015-01-20T14:17:23-06:00</updated>
+  <id>http://travistidwell.com/</id>
+  <author>
+    <name><![CDATA[Travis Tidwell]]></name>
+    <email><![CDATA[travist349@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Automating and Testing Drupal with Zombie.js]]></title>
+    <link href="http://travistidwell.com/blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js/"/>
+    <updated>2013-04-13T14:18:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js</id>
+    <content type="html"><![CDATA[<p>Today I gave a presentation over Automating and Testing Drupal with Zombie.js at the
+<a href="http://drupaldallas.org/">Drupal Dallas Days Conference</a>. I had a blast putting this
+presentation together and I think just as much fun giving it.  I also used the incredible
+library <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> for the first time which is an
+amazing way to build a presentation.  I hope you enjoy it&hellip;</p>
+
+<!-- more -->
+
+
+<h2>Presentation Video</h2>
+
+<iframe width="100%" height="450px" src="http://www.youtube.com/embed/gd3L9i7Yb8Y" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Presentation Slides</h2>
+
+<ul>
+<li><a href="http://travistidwell.com/drupal-zombie">http://travistidwell.com/drupal-zombie</a></li>
+<li><a href="http://github.com/travist/drupal-zombie">http://github.com/travist/drupal-zombie</a></li>
+</ul>
+
+
+<iframe width="100%" height="500px" src="http://travistidwell.com/drupal-zombie" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Overview</h2>
+
+<h3>The Bite</h3>
+
+<p>It all begins with the bite&hellip; Let&rsquo;s say you need to automate something repetitive
+that you always do within the Drupal UI. Or, maybe you would like to write automated
+tests for Drupal, but do not want to mess with the nasty installation and runtime of
+Selenium IDE. Enter Zombie.js&hellip; a lightweight, insanely fast, headless browser for
+testing and automation within a single Node.js package. No browser required.
+You have just been bitten.</p>
+
+<h3>The Infection</h3>
+
+<p>Installation is simple. Because it is a Node.js package, installation is as simple
+as installing node.js on your local computer (<a href="http://nodejs.org">http://nodejs.org</a>), and then run
+<div>
+  <pre><code class='bash'>npm install zombie</code></pre>
+</div>
+
+You have just been infected.</p>
+
+<h3>Walking</h3>
+
+<p>You realize that writing simple tests and automation tools is simple. You select
+elements on the page using tools you know such as jQuery Selectors (Sizzle). The
+API is easy and intuitive. You are now walking.</p>
+
+<h3>Hunting and Feeding</h3>
+
+<p>You now cannot get enough&hellip; You are automating every mundane taks that you do
+within the UI. You now have a powerful command line application at your fingertips
+and realize that you do not need to build custom Services endpoints or custom Drush
+commands to do what you want. You hunger for more&hellip; welcome to the hunting phase.</p>
+
+<h3>Believing</h3>
+
+<p>You are now a believer. Zombie.js is amazing and will make your life easier.</p>
+]]></content>
+  </entry>
+  
+</feed>

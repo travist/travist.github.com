@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Travis Tidwell]]></title>
+  <link href="http://travistidwell.com/atom.xml" rel="self"/>
+  <link href="http://travistidwell.com/"/>
+  <updated>2016-06-16T09:04:51-05:00</updated>
+  <id>http://travistidwell.com/</id>
+  <author>
+    <name><![CDATA[Travis Tidwell]]></name>
+    <email><![CDATA[travist349@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Building Serverless Apps with Form.io]]></title>
+    <link href="http://travistidwell.com/blog/2016/06/16/building-serverless-apps-with-form-dot-io/"/>
+    <updated>2016-06-16T09:00:35-05:00</updated>
+    <id>http://travistidwell.com/blog/2016/06/16/building-serverless-apps-with-form-dot-io</id>
+    <content type="html"><![CDATA[<p>Since we released Form.io last year, we have come a long way to provide a revolutionary new tool that catapults developers to world of Serverless Applications. In this walkthrough tutorial, I show you how to build a Serverless Movie Management application where you can create Playlists of Movie Trailers from YouTube. We also talk about the concepts behind Serverless applications, and then end up revealing an amazing capability that allows developers to share, fork, and launch existing apps on Github. Enjoy!</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_25-wYc3l0w?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing Form.io: The combined Form and API platform for developers.]]></title>
+    <link href="http://travistidwell.com/blog/2015/10/07/introducing-form-dot-io-the-combined-form-and-api-platform-for-developers/"/>
+    <updated>2015-10-07T14:32:19-05:00</updated>
+    <id>http://travistidwell.com/blog/2015/10/07/introducing-form-dot-io-the-combined-form-and-api-platform-for-developers</id>
+    <content type="html"><![CDATA[<p>I am very excited to talk to you about a new project that I have been working on called <a target="_blank" href="https://form.io">&lt;form.io&gt;</a>. As a quick introduction, Form.io is the first combined Form and API platform built specifically for Developers. It provides them an easy to use drag-and-drop form builder interface that not only creates forms that can be embedded within their applications, but also automatically generates a RESTful API to support them. Take a look at this 2 minute video to get a better idea of this amazing technology, and enjoy Form.io!</p>
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/hrggvEniXFI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to build a M.E.A.N web application]]></title>
+    <link href="http://travistidwell.com/blog/2015/01/20/how-to-build-a-mean-web-application/"/>
+    <updated>2015-01-20T09:45:18-06:00</updated>
+    <id>http://travistidwell.com/blog/2015/01/20/how-to-build-a-mean-web-application</id>
+    <content type="html"><![CDATA[<p>Lately I have been really getting into a new web application stack referred to as the M.E.A.N stack. To give you a
+very brief description, the M.E.A.N stack is a full web application stack where JavaScript is used at every layer.
+The acronym stands for the following:</p>
+
+<ul>
+<li>M: <strong>MongoDB</strong> &ndash; A NoSQL database powered by JavaScript.</li>
+<li>E: <strong>ExpressJS</strong> &ndash; A Node.js application framework.</li>
+<li>A: <strong>AngularJS</strong> &ndash; A front-end single-page javascript application framework.</li>
+<li>N: <strong>NodeJS</strong> &ndash; A server-side javascript application engine.</li>
+</ul>
+
+
+<p>This stack has many benefits that caters itself to the new Web 3.0 movement where the Internet of Things is
+radically changing old paradigms on how web applications should be built. For example, the M.E.A.N stack requires a total
+separation between the Front end application and the Backend server via RESTful API&rsquo;s. This provides the ability for
+multiple front end applications to be built on top of a single backend REST service.</p>
+
+<p>When learning how to build a M.E.A.N web application, one thing that frustrated me was the lack of a complete walkthrough
+tutorials on how to build an app within this architecture. I was able to find plenty of documentation over the atomic
+pieces of M.E.A.N (such as plenty of documentation and videos over AngularJS), but it was really up to me to put all the
+pieces together to build an application. I created this presentation and video as a COMPLETE walkthrough on how to get
+your application started.</p>
+
+<p>I hope you enjoy it.</p>
+
+<!-- more -->
+
+
+<h2>Video</h2>
+
+<iframe width="100%" height="500px" src="//www.youtube.com/embed/OhPFgqHz68o" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Presentation</h2>
+
+<p><a href="http://travistidwell.com/presentations/meanapp">http://travistidwell.com/presentations/meanapp</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[When to NOT use Drupal]]></title>
+    <link href="http://travistidwell.com/blog/2014/10/20/when-to-not-use-drupal/"/>
+    <updated>2014-10-20T21:12:05-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/10/20/when-to-not-use-drupal</id>
+    <content type="html"><![CDATA[<p>Today, I gave a presentation to the Drupal Dallas meetup over when to NOT use
+Drupal.  This is in many ways a hard topic to discuss, since as a Drupal fan,
+I want Drupal to be the solution to many web problems. However, it just isn&rsquo;t
+pragmatic in many cases, and the presentation I gave explores this topic.</p>
+
+<p>In short, my challenge is for everyone to stop saying &ldquo;Yeah, Drupal can do that!&rdquo;
+and instead start saying &ldquo;Yeah, Drupal SHOULD do that!&rdquo; and mean it.</p>
+
+<p>I hope you enjoy.</p>
+
+<!-- more -->
+
+
+<h2>Slides</h2>
+
+<ul>
+<li><a href="http://travistidwell.com/presentations/notdrupal">http://travistidwell.com/presentations/notdrupal</a></li>
+</ul>
+
+
+<h2>Video</h2>
+
+<iframe width="100%" height="500px" src="//www.youtube.com/embed/Ya4NotZNc4Y" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Coder Soundtrack Volume 4]]></title>
+    <link href="http://travistidwell.com/blog/2014/10/17/coder-soundtrack-volume-4/"/>
+    <updated>2014-10-17T15:23:08-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/10/17/coder-soundtrack-volume-4</id>
+    <content type="html"><![CDATA[<p>Listening to this makes software fly from my fingertips.  Enjoy.</p>
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/34970395&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A nerds guide to a $100 DVD-less car movie experience]]></title>
+    <link href="http://travistidwell.com/blog/2014/07/03/a-nerds-guide-to-a-dvd-less-car-movie-experience/"/>
+    <updated>2014-07-03T14:15:31-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/07/03/a-nerds-guide-to-a-dvd-less-car-movie-experience</id>
+    <content type="html"><![CDATA[<p>For those out there with kids, you already know what a nightmare it is to go on a road trip with them. Don&rsquo;t get me
+wrong, I love my kids&hellip; but driving in the car with them on a road trip makes me go batshit insane. That is why it
+is important for all parents out there to establish a road-trip strategy to keep your kids occupied. Movies are great,
+but that also opens the door for more frustration trying to deal with movies in the car&hellip; Things like&hellip;</p>
+
+<ul>
+<li>It&rsquo;s expensive! (especially if you have more than one kid who don&rsquo;t like to watch the same movies)</li>
+<li>Keeping track of DVD&rsquo;s in the car is a nightmare</li>
+<li>Car DVD players have a tendency to trash your DVD&rsquo;s</li>
+<li>You have to keep swapping out movies unless your kid is OK with watching the same one over and over&hellip;</li>
+<li>The list goes on.</li>
+</ul>
+
+
+<p>So, for all those parents out there, who would like a good car movie experience for both the kids and you, here&rsquo;s a
+nerds walkthrough on how you can make it happen.</p>
+
+<!-- more -->
+
+
+<h2>Step 1: Get the stuff you need&hellip;</h2>
+
+<p>For this step, you will need to spend some money&hellip; but it is not much.  I too was on a tight budget, so here is what
+I found that works out great.</p>
+
+<ul>
+<li><p><strong>A DVD Player that supports SD/USB Cards</strong> &ndash; The SD/USB is the most important part here.  That is what is going
+to free us from using DVD&rsquo;s (which I will get to later). Here is the one that my wife picked out, and what I used
+for this blog post. It has good reviews and is cheap so we went with it.</p>
+
+<p><div style="width: 200px; float: left; margin: 0 20px 0 0;"><a href="http://www.amazon.com/gp/product/B003BWAKJA/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003BWAKJA&linkCode=as2&tag=travtidw-20&linkId=V5IW7AK5FOOQL4VG"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B003BWAKJA&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=travtidw-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=travtidw-20&l=as2&o=1&a=B003BWAKJA" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+<div><a href="http://www.amazon.com/gp/product/B003BWAKJA/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003BWAKJA&linkCode=as2&tag=travtidw-20&linkId=V5IW7AK5FOOQL4VG">Sylvania SDVD7027-C, 7-Inch Portable DVD Player with Car Bag/Kit, Swivel Screen, USB/SD Card Reader (Black)</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=travtidw-20&l=as2&o=1&a=B003BWAKJA" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+<div style="clear:left;">&nbsp;</div></p></li>
+<li><p><strong>A USB Drive or SD Card</strong> &ndash; Next you will need to get a USB Drive or an SD Card to hold all of your movies. Here is
+what I recommend.</p>
+
+<p><div style="width: 180px; float: left;"><a href="http://www.amazon.com/gp/product/B003VNKNF0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003VNKNF0&linkCode=as2&tag=travtidw-20&linkId=3253KYRBKEVZ6DEZ"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B003VNKNF0&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=travtidw-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=travtidw-20&l=as2&o=1&a=B003VNKNF0" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+<div><a href="http://www.amazon.com/gp/product/B003VNKNF0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B003VNKNF0&linkCode=as2&tag=travtidw-20&linkId=3253KYRBKEVZ6DEZ">Transcend 32 GB Class 10 SDHC Flash Memory Card (TS32GSDHC10E)</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=travtidw-20&l=as2&o=1&a=B003VNKNF0" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+<div style="clear:left;">&nbsp;</div></p></li>
+<li><p><strong>Kids Headphones</strong> &ndash; Since you may have more than one in the car, your kids will probably each need their own set of kids
+headphones.  These will limit the output volume so that it doesn&rsquo;t harm the ears of your kids.</p>
+
+<p><div style="width: 200px; float:left; margin: 0 20px 0 0;"><a href="http://www.amazon.com/gp/product/B00AXE911W/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00AXE911W&linkCode=as2&tag=travtidw-20&linkId=B5IDPYSTGFVQMQ64"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00AXE911W&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=travtidw-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=travtidw-20&l=as2&o=1&a=B00AXE911W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+<div><a href="http://www.amazon.com/gp/product/B00AXE911W/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00AXE911W&linkCode=as2&tag=travtidw-20&linkId=B5IDPYSTGFVQMQ64">Kidz Gear Wired Headphones For Kids &ndash; Blue</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=travtidw-20&l=as2&o=1&a=B00AXE911W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
+<div style="clear:left;">&nbsp;</div></p></li>
+<li><strong>TOTAL: Only $95.38!!!</strong></li>
+</ul>
+
+
+<h2>Step 2: Convert your DVD to digital files (mp4)</h2>
+
+<p>This step, you will need to download a piece of software that will help you rip your DVD&rsquo;s into media files. I am on
+a Mac, so the software that I used was called <a href="http://handbrake.fr/">Handbrake</a>.  The best way to do this step
+is really to just follow some already fantastic tutorials on how to rip your DVD.  Here is a really good one that seems to be complete.
+  &ndash; <a href="http://www.macworld.com/article/1157590/how_to_rip_dvd_handbrake.html">http://www.macworld.com/article/1157590/how_to_rip_dvd_handbrake.html</a></p>
+
+<h2>Step 3: Install Transcoding Software</h2>
+
+<p>Now that you have a video file of your DVD, you will still need to transcode that video into a format that your DVD player can understand.  Some of the more expensive
+players, you don&rsquo;t need to worry about this, but since I was on a budget, I had to convert the videos that I had into a lower
+resolution AVI format. To do this, you will need FFMPEG.</p>
+
+<ul>
+<li><strong>Start by installing Homebrew</strong> &ndash; The easiest way to install FFMPEG on a Mac is to do it using <a target="_blank" href="http://brew.sh/">Homebrew</a>.
+The installation does require you to use your <strong>Terminal</strong>, which may scare some people, but what it will really amount to is
+you just copying and pasting what I provide you into the shell and press enter.  So, open up <strong>Terminal</strong> on your Mac (you will
+find it in your Utilities), and then type the following.</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>Check the Homebrew installation</strong> &ndash; Now that we have homebrew installed, the next thing we should do is just make sure that
+everything is installed correctly.  We can do that by typing the following.</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  brew doctor
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>Install FFMPEG</strong> &ndash; The next task is to install FFMPEG.  We can find all the available options by running the following.</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  brew info ffmpeg
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>With this information, we can then construct the installation command which will install pretty much everything available.  Install FFMPEG
+by typing the following in your command prompt.</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  brew install ffmpeg --with-fdk-aac --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools --with-x265
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 4: Transcode your videos</h2>
+
+<p>We are now ready to start transcoding!  To transcode any of your vidoes, simply navigate to the directory that contains your video
+and then type the following command.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  ffmpeg -i Ratatouille.mp4 -c:v mpeg4 -vtag xvid -qscale:v 2 -c:a libmp3lame -qscale:a 6 -vf <span class="nv">scale</span><span class="o">=</span>480:-1 Ratatouille.avi
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will need to change your command to take the name of your video (For me that was <em>Ratatouille.mp4</em>), and then also provide the name of the
+video that will be converted (For me that was <em>Ratatouille.avi</em>.  This bit of code actually takes the original video and then scales it to the size of the DVD player screen as well as converts it
+to a format that you video player understands.</p>
+
+<h2>Step 5: Write a script to transcode all your videos!</h2>
+
+<p>Now, lets say that you already have a folder filled with videos that you wish to transcode.  It may be painful to wait for each
+and every one of them to finish before doing the next one.  You can solve this problem by writing a script that will iterate through
+all the videos within a folder and convert them and put them in an &ldquo;encoded&rdquo; folder.  To do this, create a new script called <strong>encode.sh</strong>
+and then place it inside of the directory with your videos.  The contents of this file will be as follows.</p>
+
+<p><strong>encode.sh</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>mkdir encoded
+</span><span class='line'><span class="k">for </span>FILE in *.*; <span class="k">do</span>
+</span><span class='line'><span class="k">  if</span> <span class="o">[[</span> <span class="s2">&quot;${FILE}&quot;</span> !<span class="o">=</span> *encode* <span class="o">]]</span>; <span class="k">then</span>
+</span><span class='line'><span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Converting ${FILE}&quot;</span>
+</span><span class='line'>    <span class="nv">OUTPUT</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&quot;$FILE&quot;</span><span class="k">)</span>
+</span><span class='line'>    <span class="nv">OUTPUT</span><span class="o">=</span><span class="s2">&quot;./encoded/${OUTPUT%.*}.avi&quot;</span>
+</span><span class='line'>    ffmpeg -y -i <span class="s2">&quot;${FILE}&quot;</span> -c:v mpeg4 -vtag xvid -qscale:v 2 -c:a libmp3lame -qscale:a 6 -vf <span class="nv">scale</span><span class="o">=</span>480:-1 <span class="s2">&quot;${OUTPUT}&quot;</span>
+</span><span class='line'>  <span class="k">fi</span>
+</span><span class='line'><span class="k">done</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will now need to make sure this file is executable by typing the following.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  chmod +x encode.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can now execute this file by typing the following in terminal&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  ./encode.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will now create all of the videos and place them in an encoded folder.</p>
+
+<h2>Step 6: Put all these files in on your SD Card.</h2>
+
+<p>You are now ready to copy all the encoded files directly onto your SD Card, and then put this inside of your DVD Player. You
+should be able to get about 30 DVD&rsquo;s worth of videos onto a single card!!</p>
+
+<p>Happy Traveling!!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fun with GIT and AWK]]></title>
+    <link href="http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk/"/>
+    <updated>2014-06-11T21:53:43-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/06/11/fun-with-git-and-awk</id>
+    <content type="html"><![CDATA[<p>For those of you who use GIT, you have probably noticed that while it is an incredibly powerful tool, one area that it
+could use some help is reporting.  For example, Let&rsquo;s say that I want to determine all changes to a file provided a date
+range&hellip; how would you do that?  While there are many plugin utilities out there that provide reporting to GIT, very
+rarely will you find a utility that is able to generate the report you need at all times.</p>
+
+<p>One thing that many people do not realize is that within GIT you can easily pipe the log to another application and
+quite literally build your own reports from within the command line.  One of the more powerful applications that you
+can utilize is AWK, which allows you to write some code that parses through a log to generate a report to your needs.</p>
+
+<p>Here are a few that I created to give you an idea of what you can do with this technique.</p>
+
+<!-- more -->
+
+
+<p>  <strong>Determine how productive your team has been using git history.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;1 year ago&quot;</span> --until<span class="o">=</span><span class="s2">&quot;now&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;files changed\|Author\|Merge:&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{ \</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Author:&quot;) {\</span>
+</span><span class='line'><span class="s1">      currentUser = $2;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($2 == &quot;files&quot;) {\</span>
+</span><span class='line'><span class="s1">      files[currentUser]+=$1;\</span>
+</span><span class='line'><span class="s1">      inserted[currentUser]+=$4;\</span>
+</span><span class='line'><span class="s1">      deleted[currentUser]+=$6;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  } END {\</span>
+</span><span class='line'><span class="s1">    for (i in files) {\</span>
+</span><span class='line'><span class="s1">      print i &quot;:&quot;, &quot;files changed:&quot;, files[i], &quot;lines inserted:&quot;, inserted[i], &quot;lines deleted:&quot;, deleted[i];\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine all changes to a file provided a date range in GIT.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;3 weeks ago&quot;</span> --until<span class="o">=</span><span class="s2">&quot;now&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;Merge pull request&quot;</span> -B 5<span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1==&quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      output = system(&quot;git diff &quot; $2 &quot;^ &quot; $2 &quot; {YOUR FILE HERE}&quot;);\</span>
+</span><span class='line'><span class="s1">      if (output) {\</span>
+</span><span class='line'><span class="s1">        print output;\</span>
+</span><span class='line'><span class="s1">      }\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine the diff provided a Pivotal Tracker Story ID.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log<span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;Merge pull request.*{INSERT STORY ID HERE}&quot;</span> -B 5<span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1==&quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      print system(&quot;git diff &quot; $2 &quot;^ &quot; $2);\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <strong>Determine all commits for a developer given a time range.</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --shortstat --since<span class="o">=</span><span class="s2">&quot;2011-9-1&quot;</span> --until<span class="o">=</span><span class="s2">&quot;2011-11-15&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | grep <span class="s2">&quot;commit\|Author\|Merge:&quot;</span> <span class="se">\</span>
+</span><span class='line'>  | awk <span class="s1">&#39;{\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Merge:&quot;) {\</span>
+</span><span class='line'><span class="s1">      merge = 1;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;commit&quot;) {\</span>
+</span><span class='line'><span class="s1">      merge = 0;\</span>
+</span><span class='line'><span class="s1">      commit = $2;\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">    if ($1 == &quot;Author:&quot; &amp;&amp; tolower($2) == tolower(&quot;Travis&quot;)) {\</span>
+</span><span class='line'><span class="s1">      if (!merge) {\</span>
+</span><span class='line'><span class="s1">        merge = 0;\</span>
+</span><span class='line'><span class="s1">        print system(&quot;git diff &quot; commit &quot;^ &quot; commit);\</span>
+</span><span class='line'><span class="s1">      }\</span>
+</span><span class='line'><span class="s1">    }\</span>
+</span><span class='line'><span class="s1">  }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I hope everyone finds this useful.  Now use the comments to share your own GIT with AWK magic!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Working with Seamless iFrames]]></title>
+    <link href="http://travistidwell.com/blog/2014/04/11/working-with-seamless-iframes/"/>
+    <updated>2014-04-11T22:31:14-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/04/11/working-with-seamless-iframes</id>
+    <content type="html"><![CDATA[<p>As a web developer, one of the things that I have learned is that old conventions should NOT apply to modern practices.
+iFrames is a great example of a wonderful web technology that is shunned today based on old impressions and existing bad practices. But, when it comes to iframes, you should not base your impressions off of the applications of that technology, but off of the technology itself.  And as it turns out, iFrames are amazing if used correctly.</p>
+
+<!-- more -->
+
+
+<p>So, what is it about iFrames that people have a sour opinion?  Well, for one thing, they can be abused, and unfortunately people LOVE to abuse iframes. My rule of thumb is this&hellip;
+<strong>Do not use an iframe to encapsulate an iterface that changes context</strong>.  What I mean by this is you should not use an iframe if the page you are iframing has the capability of navigating a person away from a single purpose (like iframing all of <a href="https://youtube.com">https://youtube.com</a> vs. just iframing a single video in YouTube).</p>
+
+<p>Another problem with iframes is that they are kind of hard to work with&hellip; As it turns out, trying to create an iframe that appears to your visitor as a single seamless interface is not an easy thing to do. For this reason, I decided to create a single library that does all of the hard work for you. It is called <a href="http://travistidwell.com/seamless.js/index.html">Seamless.js</a> and I hope you like it.</p>
+
+<p>Click on these links to check out Seamless.js:</p>
+
+<p>  <a href="http://www.travistidwell.com/seamless.js/index.html">http://www.travistidwell.com/seamless.js/index.html</a> (Seamless.js Website)</li>
+  <a href="https://github.com/travist/seamless.js">https://github.com/travist/seamless.js</a> (Github Project Page)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Coder Soundtrack Volume 3]]></title>
+    <link href="http://travistidwell.com/blog/2014/03/26/coder-soundtrack-volume-3/"/>
+    <updated>2014-03-26T20:56:12-05:00</updated>
+    <id>http://travistidwell.com/blog/2014/03/26/coder-soundtrack-volume-3</id>
+    <content type="html"><![CDATA[<p>It has been a while since I released my last Coder Soundtrack, and due to such a great response from the previous soundtrack, I have decided to bring you my latest.  I hope you enjoy&hellip;</p>
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/9957711&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[An online RSA public and private key generator]]></title>
+    <link href="http://travistidwell.com/blog/2013/09/06/an-online-rsa-public-and-private-key-generator/"/>
+    <updated>2013-09-06T21:22:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/09/06/an-online-rsa-public-and-private-key-generator</id>
+    <content type="html"><![CDATA[<p>I was recently in a meeting where a person needed to generate a private and
+public key for RSA encryption, but they were using a PC (Windows).  This is something
+that is easily done via a terminal using <code>ssh-keygen</code> on Mac and Linux, however on Windows&hellip;
+this tool is not easily accessible to the non-technical person.</p>
+
+<p>It then occurred to me (and a head slapped followed), that I have fairly recently
+published a library for Javascript RSA encryption which includes private and
+public key generation for RSA encryption.  Not only that, but this is all
+available online.</p>
+
+<p>So, if anyone needs an online RSA key generator, look no further than <a target="_blank" href="http://travistidwell.com/jsencrypt/demo/"><a href="http://travistidwell.com/jsencrypt/demo">http://travistidwell.com/jsencrypt/demo</a></a>.</p>
+
+<!-- more -->
+
+
+<p>This directly maps to the Open Source GitHub repository found at <a target="_blank" href="https://github.com/travist/jsencrypt"><a href="https://github.com/travist/jsencrypt">https://github.com/travist/jsencrypt</a></a>, so
+anyone can modify this website to make it better.</p>
+
+<p>And here is an iframe of the RSA key generation tool.</p>
+
+<iframe src="http://travistidwell.com/jsencrypt/demo/index.html" width="100%" height="1560px" frameborder="0"></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[sudo make me a sandwich... Literally!]]></title>
+    <link href="http://travistidwell.com/blog/2013/09/01/sudo-make-me-a-sandwich/"/>
+    <updated>2013-09-01T21:57:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/09/01/sudo-make-me-a-sandwich</id>
+    <content type="html"><![CDATA[<p>So, I have been preparing for my presentation that I will be giving to the <a href="http://events.jquery.org/2013/austin/#program">jQuery
+Conference</a>, where I will be talking about automating and testing the web using
+a combination of jQuery, Node.js, and Phantom.js.  This presentation will primarily go
+over a new library that I wrote called <a href="https://github.com/travist/jquery.go.js">jQuery.go.js</a>, which
+takes the jQuery interface and brings it into Node.js for the sole purpose of web
+automation and testing using the Phantom.js headless browser.  It is a project that I am very
+happy with so when you get a chance, check it out and give me your feedback&hellip;</p>
+
+<p>But what REALLY excites me about this presentation is the project I came up with that demonstrates
+the power of these three JavaScript technologies combined.  What I basically created was a command line
+application that allows you to order a sandwich from Jimmy John&rsquo;s website.  This should
+strike a chord with many geeks out there, since there is a legendary XKCD comic which I
+basically made real with this project&hellip;</p>
+
+<p><img src="http://imgs.xkcd.com/comics/sandwich.png" /></p>
+
+<p>So, without further adieu, I give you <a href="https://github.com/travist/makemeasandwich.js">MakeMeASandwich.js</a>!</p>
+
+<!-- more -->
+
+
+<p>I provide some instructions on how to install and use this library <a href="https://github.com/travist/makemeasandwich.js">on the project page</a>&hellip;</p>
+
+<p>Also, I purposefully left my favorite sandwich and work address in the config.json if anyone decides they would like to say thanks&hellip;  ;)</p>
+
+<p>Ping me in IRC @ #drupal-dallas (travist) before you do it though&hellip;</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Coder Soundtrack volume 2]]></title>
+    <link href="http://travistidwell.com/blog/2013/07/16/coder-soundtrack-volume-2/"/>
+    <updated>2013-07-16T21:57:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/07/16/coder-soundtrack-volume-2</id>
+    <content type="html"><![CDATA[<p>As most of you already know, I am a big fan of music and am a firm believer that
+a good coder listens to music while they code.  For that reason, I am releasing
+my Coder Soundtrack volume 2 which is the latest of the music that I am listing
+to while I code.  I hope you enjoy&hellip;</p>
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F7868312"></iframe>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Phantom.js with Node.js]]></title>
+    <link href="http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs/"/>
+    <updated>2013-07-05T14:40:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://phantomjs.org/img/phantomjs-logo.png" title="PhantomJS" > Recently, I have had much interest in building web automation and testing tools
+using Node.js.  The challenge, however, is when using Node.js for building tests
+and automation, your options are pretty slim when picking your headless browser.
+While <a href="http://zombie.labnotes.org/">Zombie.js</a> is a decent browser, it
+uses JSDOM for its layout engine, whereas most of the web is ran on (or based off of) <a href="https://www.webkit.org/">WebKit</a>.  This
+creates problems when trying to formulate accurate tests as well as benefit from
+the ongoing development into the WebKit engine.  What really peaked my interest
+was the project called <a href="http://phantomjs.org">Phantom.js</a> which is
+basically a headless WebKit browser that exposes a JavaScript API to interact with
+the browser.</p>
+
+<!-- more -->
+
+
+<p>Here is the problem&hellip; Phantom.js is not compatible with Node.js.  However, there is
+a project that does expose the Phantom.js browser within the Node.js environment.
+This project is called <a href="https://github.com/alexscheelmeyer/node-phantom">Node Phantom</a>,
+which does a great job at bringing PhantomJS to NodeJS.  But, there is still
+another issue where the API to this library is not easy to use like Zombie.js.</p>
+
+<p>That is why I built a library which leverages the Node-Phantom library, but brings
+in the <a href="http://zombie.labnotes.org/API">Zombie.js API</a> for ease of use.
+This library is called <a href="https://github.com/travist/zombie-phantom">Zombie Phantom</a>
+and I hope you enjoy it.</p>
+
+<p>Also, please read the <a href="https://github.com/travist/zombie-phantom">project description</a> to
+get an idea of the differences between this library and the Zombie API before using.</p>
+
+<p>Here is an <a href="https://github.com/travist/zombie-phantom/blob/master/example.js">example</a> of how to use this library.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">Browser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;zombie-phantom&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">browser</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Browser</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">site</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8888&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">addJQuery</span><span class="o">:</span> <span class="kc">false</span>  <span class="c1">// This page already has jQuery installed so use it...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">browser</span><span class="p">.</span><span class="nx">visit</span><span class="p">(</span><span class="s1">&#39;/user/login&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">browser</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#edit-name&#39;</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">browser</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#edit-pass&#39;</span><span class="p">,</span> <span class="s1">&#39;123password&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">browser</span><span class="p">.</span><span class="nx">pressButton</span><span class="p">(</span><span class="s1">&#39;#edit-submit&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;You are logged in!&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Drupal with Sencha Touch]]></title>
+    <link href="http://travistidwell.com/blog/2013/06/18/mobile-drupal-with-sencha-touch/"/>
+    <updated>2013-06-18T14:36:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/06/18/mobile-drupal-with-sencha-touch</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://www.sencha.com/img/sencha-large.png" title="Sencha Touch" > Yesterday, I gave a presentation
+to the Drupal Dallas Group over a technology that I have been really interested in lately called
+<a href="http://www.sencha.com/products/touch">Sencha Touch</a>.  Basically, this technology allows you to
+create a mobile application using an MVC web application framework based off of ExtJS.  What is
+even more exciting is when you pair this technology with the <a href="http://drupal.org">Drupal CMS</a> as a backend service
+for this mobile framework.  The result is something very exciting.</p>
+
+<!-- more -->
+
+
+<h2>Presentation Slides</h2>
+
+<ul>
+<li><a href="http://travistidwell.com/presentations/drupal-sencha">http://travistidwell.com/presentations/drupal-sencha</a></li>
+<li><a href="https://github.com/travist/presentations/tree/master/drupal-sencha">https://github.com/travist/presentations/tree/master/drupal-sencha</a></li>
+</ul>
+
+
+<iframe width="100%" height="500px" src="http://www.youtube.com/embed/6JQJSGOMFEM" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My new blog using Octopress]]></title>
+    <link href="http://travistidwell.com/blog/2013/05/02/my-new-blog-using-octopress/"/>
+    <updated>2013-05-02T14:36:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/05/02/my-new-blog-using-octopress</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://weedygarden.net/images/2013/octopress.png" title="Octopress" > Today I am launching my website using a new technology that REALLY excites me.  For
+starters, this blog is built using the <a href="http://jekyllrb.com/">Jekyll</a> system, which is basically a static
+website generator but allows you to install plugins, create layouts, as well as many
+other features that keep you from repeating yourself when building a website (DRY).</p>
+
+<p>In addition to Jekyll, this blog is built using a technology that sits on top of
+Jekyll called <a href="http://octopress.org/">Octopress</a>, which simply provides a framework for
+building technology blogs&hellip; or in other words, it is a blogging engine for Nerds.  Amazing stuff
+and I hope this enables me to easily add my thoughts from the past and the future.</p>
+
+<!-- more -->
+
+
+<p>And then finally, I cannot forget <a href="http://pages.github.com/">Github Pages</a>. I am in love
+with Github and when they introduced this capability, it just solidified my allegiance to
+this company. If you haven&rsquo;t had a chance to see this technology, then I highly recommend
+checking it out.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[drupal.go.js: A node.js package to automate and test Drupal using Zombie.js.]]></title>
+    <link href="http://travistidwell.com/blog/2013/04/14/drupalgo/"/>
+    <updated>2013-04-14T15:45:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/04/14/drupalgo</id>
+    <content type="html"><![CDATA[<p>When I gave my presentation yesterday regarding <a href="blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js">Automating and Testing Drupal with Zombie.js</a>,
+I also introduced a new project that I created which makes it super simple to automate anything
+within the Drupal UI using Zombie.js (which is a completely headless browser implemented in Node.js).
+This project is called <a href="https://github.com/travist/drupal.go.js">drupal.go.js</a> and I am very excited about it.</p>
+
+<!-- more -->
+
+
+<p>Here are the details about this project&hellip;</p>
+
+<h2>Introduction</h2>
+
+<p>This node.js package provides an easy way to automate and test Drupal using the Zombie.js framework. It provides some helpers that make working with Drupal within Zombie.js easy and fun.</p>
+
+<h2>Installation &amp; Usage</h2>
+
+<h3>Step 1</h3>
+
+<p>Install node.js by going to <a href="http://nodejs.org">http://nodejs.org</a></p>
+
+<h3>Step 2</h3>
+
+<p>On OS X install the OSX GCC installer. On Windows you&rsquo;ll need Cygwin to get access to GCC, Python, etc. Read this for detailed instructions and troubleshooting.</p>
+
+<h3>Step 3</h3>
+
+<p>Since this tool requires 0.8 of node.js or earlier, you will need to install the NVM. Go to <a href="https://github.com/creationix/nvm">https://github.com/creationix/nvm</a> and follow the installation section.</p>
+
+<h3>Step 4</h3>
+
+<p>You can now install this library using NPM.</p>
+
+<div>
+  <pre><code class='javascript'>nvm use 0.8
+npm install drupalgo</code></pre>
+</div>
+
+
+<h2>Configuration</h2>
+
+<p>The configuration for your automation and testing should be placed within a configuration file in *.json form. This file contains your configurations for your Drupal installation as well as other configurations that you would like to include in your automation and testing, such as content creation, etc.</p>
+
+<figure class='code'><figcaption><span>config.json </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;http://drupal.local/&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;article&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello There&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;This is very cool!&quot;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;article&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;This is another node&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;Nice!&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Example</h2>
+
+<p>You can now include this library in your test application and then do stuff using the simple drupal.go command. Since this library uses Zombie.js for its core browser, you can pass along any Zombie.js command from it&rsquo;s Zombie.js API to the drupal.go command like so&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;pushButton&#39;</span><span class="p">,</span> <span class="s1">&#39;#edit-submit&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This function returns a Promise to be used with the popular Async.js library making it very simple to build intuitive tests without falling into callback hell.</p>
+
+<p>Here is an example of how simple it is to write some automation with this library&hellip;</p>
+
+<p>Login, then create some nodes&hellip;.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">async</span> <span class="o">=</span>     <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">drupal</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;drupalgo&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Load the config.json file... as seen above.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">browser</span> <span class="o">=</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;config.json&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Login, then create some content...</span>
+</span><span class='line'><span class="nx">async</span><span class="p">.</span><span class="nx">series</span><span class="p">([</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">),</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;createMultipleContent&#39;</span><span class="p">,</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;nodes&#39;</span><span class="p">))</span>
+</span><span class='line'><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;We are done!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Extending</h2>
+
+<p>This library is super easy to extend and create your own Drupal processes. You can do so by simply attaching them to the Drupal object and then they can be utilized with drupal.go like other processes. Here is an example.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">async</span> <span class="o">=</span>     <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">drupal</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;drupalgo&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Add a new task to edit the node.</span>
+</span><span class='line'><span class="nx">drupal</span><span class="p">.</span><span class="nx">editNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">async</span><span class="p">.</span><span class="nx">series</span><span class="p">([</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;visit&#39;</span><span class="p">,</span> <span class="s1">&#39;node/1234/edit&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">,</span> <span class="s1">&#39;#edit-title&#39;</span><span class="p">,</span> <span class="s1">&#39;Something else!&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;pressButton&#39;</span><span class="p">,</span> <span class="s1">&#39;#edit-submit&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">],</span> <span class="nx">done</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Load the config.json file... as seen above.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">browser</span> <span class="o">=</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;config.json&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Login, then create some content, then EDIT A NODE!...</span>
+</span><span class='line'><span class="nx">async</span><span class="p">.</span><span class="nx">series</span><span class="p">([</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">),</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;createMultipleContent&#39;</span><span class="p">,</span> <span class="nx">drupal</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;nodes&#39;</span><span class="p">)),</span>
+</span><span class='line'>  <span class="nx">drupal</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="s1">&#39;editNode&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;We are done!&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Happy Automating&hellip;.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Automating and Testing Drupal with Zombie.js]]></title>
+    <link href="http://travistidwell.com/blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js/"/>
+    <updated>2013-04-13T14:18:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2013/04/13/automating-and-testing-drupal-with-zombie-dot-js</id>
+    <content type="html"><![CDATA[<p>Today I gave a presentation over Automating and Testing Drupal with Zombie.js at the
+<a href="http://drupaldallas.org/">Drupal Dallas Days Conference</a>. I had a blast putting this
+presentation together and I think just as much fun giving it.  I also used the incredible
+library <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> for the first time which is an
+amazing way to build a presentation.  I hope you enjoy it&hellip;</p>
+
+<!-- more -->
+
+
+<h2>Presentation Video</h2>
+
+<iframe width="100%" height="450px" src="http://www.youtube.com/embed/gd3L9i7Yb8Y" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Presentation Slides</h2>
+
+<ul>
+<li><a href="http://travistidwell.com/drupal-zombie">http://travistidwell.com/drupal-zombie</a></li>
+<li><a href="http://github.com/travist/drupal-zombie">http://github.com/travist/drupal-zombie</a></li>
+</ul>
+
+
+<iframe width="100%" height="500px" src="http://travistidwell.com/drupal-zombie" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Overview</h2>
+
+<h3>The Bite</h3>
+
+<p>It all begins with the bite&hellip; Let&rsquo;s say you need to automate something repetitive
+that you always do within the Drupal UI. Or, maybe you would like to write automated
+tests for Drupal, but do not want to mess with the nasty installation and runtime of
+Selenium IDE. Enter Zombie.js&hellip; a lightweight, insanely fast, headless browser for
+testing and automation within a single Node.js package. No browser required.
+You have just been bitten.</p>
+
+<h3>The Infection</h3>
+
+<p>Installation is simple. Because it is a Node.js package, installation is as simple
+as installing node.js on your local computer (<a href="http://nodejs.org">http://nodejs.org</a>), and then run</p>
+
+<div>
+  <pre><code class='bash'>npm install zombie</code></pre>
+</div>
+
+
+<p>You have just been infected.</p>
+
+<h3>Walking</h3>
+
+<p>You realize that writing simple tests and automation tools is simple. You select
+elements on the page using tools you know such as jQuery Selectors (Sizzle). The
+API is easy and intuitive. You are now walking.</p>
+
+<h3>Hunting and Feeding</h3>
+
+<p>You now cannot get enough&hellip; You are automating every mundane taks that you do
+within the UI. You now have a powerful command line application at your fingertips
+and realize that you do not need to build custom Services endpoints or custom Drush
+commands to do what you want. You hunger for more&hellip; welcome to the hunting phase.</p>
+
+<h3>Believing</h3>
+
+<p>You are now a believer. Zombie.js is amazing and will make your life easier.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A better library for JavaScript Asymmetrical RSA Encryption]]></title>
+    <link href="http://travistidwell.com/blog/2013/02/15/a-better-library-for-javascript-asymmetrical-rsa-encryption/"/>
+    <updated>2013-02-15T22:57:00-06:00</updated>
+    <id>http://travistidwell.com/blog/2013/02/15/a-better-library-for-javascript-asymmetrical-rsa-encryption</id>
+    <content type="html"><![CDATA[<p>I am a firm believer that JavaScript will eventually be the ubiquitous coding language
+of the future.  Although there are many objections to this statement, I don&rsquo;t think
+anyone can argue that it is the best poised for ubiquity considering it
+is now used in both server side (<a href="http://nodejs.org">node.js</a>) and obviously client
+side open web standards.  And considering that this language did start out as a &lsquo;toy&rsquo;
+language, I am often amazing at how far it has come in maturity in recent years. There
+is an area where I am most amazed at its progression, and that is with Encryption.  For
+years, this area was pretty much dominated by the C and C++ languages (to which I am
+also a seasoned developer in), but now that JavaScript has made its way to the server,
+it is becoming recognized as a potential contender to this domination.</p>
+
+<!-- more -->
+
+
+<p>Much of this recognition should be directed toward the fantastic work of <a href="http://www-cs-students.stanford.edu/~tjw/jsbn/">Tom Wu</a>
+of Standford.  It was his work with the JSBN library that really opened peoples eyes
+to the effectiveness of JavaScript in the field of encryption.  However, there was just
+minor drawback to his work&hellip; The only real way to utilize his library is to have a full
+understanding behind the equations of encryption, which comes at as a huge hurtle considering
+the industry has been spoiled with the ease of use of the OpenSSL library generation of
+standardized keys used in the encryption.  In this system, there is really only two things
+to worry about&hellip; The <strong>Public Key</strong> and the <strong>Private Key</strong>, used
+for encryption and decryption respectively.  But in order to use <a href="http://www-cs-students.stanford.edu/~tjw/jsbn/">Tom Wu&rsquo;s</a>
+library, you must learn how to utilize eight different variables to the encryption equations!
+I recognized this as a perfect opportunity to create a simple wrapper library around his library that
+simply speaks in terms of the <strong>Public</strong> and <strong>Private</strong> keys
+everyone is familiar with.  Of course I found other libraries out there that claim to do the same, but
+what I couldn&rsquo;t find in these libraries was a simple wrapper around this library that basically uses
+Tom&rsquo;s library <a href="https://github.com/travist/jsencrypt/pull/6">practically</a> untouched, but simply adds a wrapper to provide parsing of actual Private and Public key-pairs
+generated with OpenSSL. Enter <a href="https://github.com/travist/jsencrypt">JSEncrypt</a>.</p>
+
+<h2>Download</h2>
+
+<p>Go to <a href="https://github.com/travist/jsencrypt">https://github.com/travist/jsencrypt</a> to download this library.</p>
+
+<h2>Website &amp; Demo</h2>
+
+<p><a href="http://travistidwell.com/jsencrypt">http://travistidwell.com/jsencrypt</a></p>
+
+<h2>How to use this library.</h2>
+
+<p>This library should work hand-in-hand with openssl. With that said, here is how to use this library.</p>
+
+<ul>
+<li>Within your terminal (Unix based OS) type the following.</li>
+</ul>
+
+
+<div>
+  <pre><code class='bash'>openssl genrsa -out rsa_1024_priv.pem 1024</code></pre>
+</div>
+
+
+<ul>
+<li>This generates a private key, which you can see by doing the following&hellip;</li>
+</ul>
+
+
+<div>
+  <pre><code class='bash'>cat rsa_1024_priv.pem</code></pre>
+</div>
+
+
+<ul>
+<li>You can then copy and paste this in the Private Key section of within index.html.</li>
+<li>Next, you can then get the public key by executing the following command.</li>
+</ul>
+
+
+<div>
+  <pre><code class='bash'>openssl rsa -pubout -in rsa_1024_priv.pem -out rsa_1024_pub.pem</code></pre>
+</div>
+
+
+<ul>
+<li>You can see the public key by typing&hellip;</li>
+</ul>
+
+
+<div>
+  <pre><code class='bash'>cat rsa_1024_pub.pem</code></pre>
+</div>
+
+
+<ul>
+<li>Now copy and paste this in the Public key within the index.html.</li>
+<li>Now you can then convert to and from encrypted text by doing the following in code.</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!doctype html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;title&gt;</span>JavaScript RSA Encryption<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.8.3.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bin/jsencrypt.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// Call this code when the page is done loading.</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// Run a quick encryption/decryption when they click.</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#testme&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="c1">// Encrypt with the public key...</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">encrypt</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JSEncrypt</span><span class="p">();</span>
+</span><span class='line'>          <span class="nx">encrypt</span><span class="p">.</span><span class="nx">setPublicKey</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#pubkey&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">());</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">encrypted</span> <span class="o">=</span> <span class="nx">encrypt</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#input&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="c1">// Decrypt with the private key...</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">decrypt</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JSEncrypt</span><span class="p">();</span>
+</span><span class='line'>          <span class="nx">decrypt</span><span class="p">.</span><span class="nx">setPrivateKey</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#privkey&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">());</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">uncrypted</span> <span class="o">=</span> <span class="nx">decrypt</span><span class="p">.</span><span class="nx">decrypt</span><span class="p">(</span><span class="nx">encrypted</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="c1">// Now a simple check to see if the round-trip worked.</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="nx">uncrypted</span> <span class="o">==</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#input&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;It works!!!&#39;</span><span class="p">);</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Something went wrong....&#39;</span><span class="p">);</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;body&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;privkey&quot;</span><span class="nt">&gt;</span>Private Key<span class="nt">&lt;/label&gt;&lt;br/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;privkey&quot;</span> <span class="na">rows=</span><span class="s">&quot;15&quot;</span> <span class="na">cols=</span><span class="s">&quot;65&quot;</span><span class="nt">&gt;</span>-----BEGIN RSA PRIVATE KEY-----
+</span><span class='line'>MIICXQIBAAKBgQDlOJu6TyygqxfWT7eLtGDwajtNFOb9I5XRb6khyfD1Yt3YiCgQ
+</span><span class='line'>WMNW649887VGJiGr/L5i2osbl8C9+WJTeucF+S76xFxdU6jE0NQ+Z+zEdhUTooNR
+</span><span class='line'>aY5nZiu5PgDB0ED/ZKBUSLKL7eibMxZtMlUDHjm4gwQco1KRMDSmXSMkDwIDAQAB
+</span><span class='line'>AoGAfY9LpnuWK5Bs50UVep5c93SJdUi82u7yMx4iHFMc/Z2hfenfYEzu+57fI4fv
+</span><span class='line'>xTQ//5DbzRR/XKb8ulNv6+CHyPF31xk7YOBfkGI8qjLoq06V+FyBfDSwL8KbLyeH
+</span><span class='line'>m7KUZnLNQbk8yGLzB3iYKkRHlmUanQGaNMIJziWOkN+N9dECQQD0ONYRNZeuM8zd
+</span><span class='line'>8XJTSdcIX4a3gy3GGCJxOzv16XHxD03GW6UNLmfPwenKu+cdrQeaqEixrCejXdAF
+</span><span class='line'>z/7+BSMpAkEA8EaSOeP5Xr3ZrbiKzi6TGMwHMvC7HdJxaBJbVRfApFrE0/mPwmP5
+</span><span class='line'>rN7QwjrMY+0+AbXcm8mRQyQ1+IGEembsdwJBAN6az8Rv7QnD/YBvi52POIlRSSIM
+</span><span class='line'>V7SwWvSK4WSMnGb1ZBbhgdg57DXaspcwHsFV7hByQ5BvMtIduHcT14ECfcECQATe
+</span><span class='line'>aTgjFnqE/lQ22Rk0eGaYO80cc643BXVGafNfd9fcvwBMnk0iGX0XRsOozVt5Azil
+</span><span class='line'>psLBYuApa66NcVHJpCECQQDTjI2AQhFc1yRnCU/YgDnSpJVm1nASoRUnU8Jfm3Oz
+</span><span class='line'>uku7JUXcVpt08DFSceCEX9unCuMcT72rAQlLpdZir876
+</span><span class='line'>-----END RSA PRIVATE KEY-----<span class="nt">&lt;/textarea&gt;&lt;br/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;pubkey&quot;</span><span class="nt">&gt;</span>Public Key<span class="nt">&lt;/label&gt;&lt;br/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;pubkey&quot;</span> <span class="na">rows=</span><span class="s">&quot;15&quot;</span> <span class="na">cols=</span><span class="s">&quot;65&quot;</span><span class="nt">&gt;</span>-----BEGIN PUBLIC KEY-----
+</span><span class='line'>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlOJu6TyygqxfWT7eLtGDwajtN
+</span><span class='line'>FOb9I5XRb6khyfD1Yt3YiCgQWMNW649887VGJiGr/L5i2osbl8C9+WJTeucF+S76
+</span><span class='line'>xFxdU6jE0NQ+Z+zEdhUTooNRaY5nZiu5PgDB0ED/ZKBUSLKL7eibMxZtMlUDHjm4
+</span><span class='line'>gwQco1KRMDSmXSMkDwIDAQAB
+</span><span class='line'>-----END PUBLIC KEY-----<span class="nt">&lt;/textarea&gt;&lt;br/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;input&quot;</span><span class="nt">&gt;</span>Text to encrypt:<span class="nt">&lt;/label&gt;&lt;br/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;input&quot;</span> <span class="na">name=</span><span class="s">&quot;input&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">rows=</span><span class="s">4</span> <span class="na">cols=</span><span class="s">70</span><span class="nt">&gt;</span>This is a test!<span class="nt">&lt;/textarea&gt;&lt;br/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;testme&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Test Me!!!&quot;</span> <span class="nt">/&gt;&lt;br/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is a demo&hellip; <a href="http://travistidwell.com/jsencrypt/demo/index.html"><a href="http://travistidwell.com/jsencrypt/demo/index.html">http://travistidwell.com/jsencrypt/demo/index.html</a></a></p>
+
+<iframe src="http://travistidwell.com/jsencrypt/demo/index.html" width="100%" height="1200px" frameborder="0"></iframe>
+
+
+<h2>Other Information</h2>
+
+<p>This library heavily utilizes the wonderful work of Tom Wu found at <a href="http://www-cs-students.stanford.edu/~tjw/jsbn">http://www-cs-students.stanford.edu/~tjw/jsbn</a>.</p>
+
+<p>This jsbn library was written using the raw variables to perform encryption. This is great for encryption, but most private keys use a Private Key in the PEM format seen below.</p>
+
+<h3>1024 bit RSA Private Key in Base64 Format</h3>
+
+<div>
+  <pre><code class='bash'>-----BEGIN RSA PRIVATE KEY-----
+MIICXgIBAAKBgQDHikastc8+I81zCg/qWW8dMr8mqvXQ3qbPAmu0RjxoZVI47tvs
+kYlFAXOf0sPrhO2nUuooJngnHV0639iTTEYG1vckNaW2R6U5QTdQ5Rq5u+uV3pMk
+7w7Vs4n3urQ6jnqt2rTXbC1DNa/PFeAZatbf7ffBBy0IGO0zc128IshYcwIDAQAB
+AoGBALTNl2JxTvq4SDW/3VH0fZkQXWH1MM10oeMbB2qO5beWb11FGaOO77nGKfWc
+bYgfp5Ogrql4yhBvLAXnxH8bcqqwORtFhlyV68U1y4R+8WxDNh0aevxH8hRS/1X5
+031DJm1JlU0E+vStiktN0tC3ebH5hE+1OxbIHSZ+WOWLYX7JAkEA5uigRgKp8ScG
+auUijvdOLZIhHWq7y5Wz+nOHUuDw8P7wOTKU34QJAoWEe771p9Pf/GTA/kr0BQnP
+QvWUDxGzJwJBAN05C6krwPeryFKrKtjOGJIniIoY72wRnoNcdEEs3HDRhf48YWFo
+riRbZylzzzNFy/gmzT6XJQTfktGqq+FZD9UCQGIJaGrxHJgfmpDuAhMzGsUsYtTr
+iRox0D1Iqa7dhE693t5aBG010OF6MLqdZA1CXrn5SRtuVVaCSLZEL/2J5UcCQQDA
+d3MXucNnN4NPuS/L9HMYJWD7lPoosaORcgyK77bSSNgk+u9WSjbH1uYIAIPSffUZ
+bti+jc1dUg5wb+aeZlgJAkEAurrpmpqj5vg087ZngKfFGR5rozDiTsK5DceTV97K
+a3Y+Nzl+XWTxDBWk4YPh2ZlKv402hZEfWBYxUDn5ZkH/bw==
+-----END RSA PRIVATE KEY-----</code></pre>
+</div>
+
+
+<p>This library simply takes keys in the following format, and translates it to those variables needed to perform the encryptions used in Tom Wu&rsquo;s library.</p>
+
+<p>Here are some good resources to investigate further.</p>
+
+<ul>
+<li><a href="http://etherhack.co.uk/asymmetric/docs/rsa_key_breakdown.html">http://etherhack.co.uk/asymmetric/docs/rsa_key_breakdown.html</a></li>
+<li><a href="http://www.di-mgt.com.au/rsa_alg.html">http://www.di-mgt.com.au/rsa_alg.html</a></li>
+<li><a href="https://polarssl.org/kb/cryptography/asn1-key-structures-in-der-and-pem">https://polarssl.org/kb/cryptography/asn1-key-structures-in-der-and-pem</a></li>
+</ul>
+
+
+<p>With this information, we can translate a private key format to the variables required with the jsbn library from Tom Wu by using the following mappings.</p>
+
+<div>
+  <pre><code class='bash'>modulus =&gt; n
+public exponent =&gt; e
+private exponent =&gt; d
+prime1 =&gt; p
+prime2 =&gt; q
+exponent1 =&gt; dmp1
+exponent2 =&gt; dmq1
+coefficient =&gt; coeff</code></pre>
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Authenticating Flatiron.js with Passport.js]]></title>
+    <link href="http://travistidwell.com/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js/"/>
+    <updated>2012-09-28T19:13:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2012/09/28/authenticating-flatiron-dot-js-with-passport-dot-js</id>
+    <content type="html"><![CDATA[<p>So, I have fallen in love with <a href="http://flatironjs.org">Flatiron.js</a>.  For those who
+are not familiar with this framework, it is basically an application framework for
+Node.js.  Obviously, it isn&rsquo;t the only framework out there, but I would like to argue
+that it is THE ONLY framework doing things right with JavaScript on the server side.
+My reasons for this statement are backed by how it utilizes <strong>RVP</strong> instead
+of <strong>MVC</strong> considering the isomorphic nature of Server-side to Client-side
+libraries.  For more foundation to this statement, please read <a href="http://blog.nodejitsu.com/scaling-isomorphic-javascript-code">Scaling Isomorphic Javascript Code</a>;
+it is a fantastic read.</p>
+
+<p>Regardless, one of my major complaints with Flatiron.js was that it lacks in OAuth.
+Looking around the Node.js community, there is a clear winner when it comes to OAuth, which
+is <a href="http://passportjs.org">Passport.js</a>. But, there is a problem&hellip; Passport.js was
+built on top of the <a href="http://expressjs.com">Express.js</a> applicaton framework and not Flatiron.js.
+Although, Express.js libraries are <a href="http://www.senchalabs.org/connect">Connect.js</a> compatible,
+and Flatiron.js is also Connect.js compatible, this isn&rsquo;t enough to provide a clean
+integration between Passport.js and Flatiron.js.  So, to solve this issue, I created
+a library that takes care of the integration work for you.  It is called <a href="https://github.com/travist/flatiron-passport">Flatiron Passport</a>,
+and I would love for you to check it out&hellip;</p>
+
+<!-- more -->
+
+
+<p>Here is the readme from this library&hellip;</p>
+
+<h2>Passport.js integration for FlatIron web framework.</h2>
+
+<p>This package allows <a href="http://flatironjs.org">Flatiron.js</a> applications to easily use the
+<a href="http://passportjs.org">Passport.js</a> authentication framework.</p>
+
+<p>There are only two things that are different between using this API and using the regular Passport API.</p>
+
+<p>1.) Instead of calling&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">passport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;passport&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span><span class='line'><span class="c1">// ... BOILERPLATE SETUP CODE GOES HERE ...</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">passport</span><span class="p">.</span><span class="nx">initialize</span><span class="p">());</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">passport</span><span class="p">.</span><span class="nx">session</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You simply need to call&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span>      <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fipassport</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron-passport&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span>           <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// ... BOILERPLATE SETUP CODE GOES HERE ...</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">fipassport</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.) Now anywhere you would use the variable passport, you replace that with fipassport in your app, like so&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="k">new</span> <span class="nx">LocalStrategy</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">serializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">deserializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">passport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(.....)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You simply call this instead&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="k">new</span> <span class="nx">LocalStrategy</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">serializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">deserializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'>  <span class="p">...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(.....)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Please refer to the included example to get a better idea&hellip;.</p>
+
+<h3>Install</h3>
+
+<div>
+  <pre><code class='bash'>npm install flatiron-passport</code></pre>
+</div>
+
+
+<h2>Example: From the example folder&hellip;</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span>            <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span>      <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">LocalStrategy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;passport-local&#39;</span><span class="p">).</span><span class="nx">Strategy</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fipassport</span> <span class="o">=</span>    <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;flatiron-passport&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span>           <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// You would not usually have these lines...</span>
+</span><span class='line'><span class="c1">// This is just to store the username in memory.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">global_user</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">global_pass</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Use the passport strategy.</span>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="k">new</span> <span class="nx">LocalStrategy</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// You would not normally have these lines...</span>
+</span><span class='line'>  <span class="c1">// This is just to store it in memory for use later.</span>
+</span><span class='line'>  <span class="nx">global_user</span> <span class="o">=</span> <span class="nx">username</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">global_pass</span> <span class="o">=</span> <span class="nx">password</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Use this as you normally would in Passport.js.</span>
+</span><span class='line'>  <span class="c1">// But for now just</span>
+</span><span class='line'>  <span class="c1">// hard-code the user object.</span>
+</span><span class='line'>  <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">id</span><span class="o">:</span> <span class="mi">1234</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">username</span><span class="o">:</span> <span class="nx">username</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">}));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Serialize based on the user ID.</span>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">serializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// @todo: Save your user to the database using the ID as a key.</span>
+</span><span class='line'>  <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Load the user and return it to passport.</span>
+</span><span class='line'><span class="nx">fipassport</span><span class="p">.</span><span class="nx">deserializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// @todo:  Load your user here based off of the ID, and call done with</span>
+</span><span class='line'>  <span class="c1">// that user object.</span>
+</span><span class='line'>  <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">id</span><span class="o">:</span><span class="nx">id</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">username</span><span class="o">:</span><span class="nx">global_user</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">password</span><span class="o">:</span><span class="nx">global_pass</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Use http and flatiron-passport.</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">flatiron</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">http</span><span class="p">);</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">fipassport</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Get the front page.</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">req</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">req</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span><span class='line'>          <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/html&#39;</span><span class="p">});</span>
+</span><span class='line'>        <span class="nx">self</span><span class="p">.</span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">};</span>
+</span><span class='line'>    <span class="p">})(</span><span class="k">this</span><span class="p">));</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Here the API to fipassport.authenticate is the exact same as it would</span>
+</span><span class='line'><span class="cm"> * be fore passport.authenticate.  It is just a simple wrapper around that</span>
+</span><span class='line'><span class="cm"> * function.</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="nx">fipassport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(</span><span class="s1">&#39;local&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">successRedirect</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">failureRedirect</span><span class="o">:</span> <span class="s1">&#39;/login&#39;</span>
+</span><span class='line'><span class="p">}));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Start our server at port 3000.</span>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;HTTP Server started on port 3000&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Happy Authenticating&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[minPlayer: A minimalistic, plugin-based 'core' media player for the web]]></title>
+    <link href="http://travistidwell.com/blog/2011/05/15/minplayer/"/>
+    <updated>2011-05-15T15:26:00-05:00</updated>
+    <id>http://travistidwell.com/blog/2011/05/15/minplayer</id>
+    <content type="html"><![CDATA[<p>Today I would like to introduce my latest media player creation. The <strong><a href="https://github.com/travist/minplayer">minPlayer</a></strong>.
+The idea behind this media player was that I have a lot of experience building web based
+multimedia players, but also noticed that I continually build more and more features into
+them based on clients requests.  Because of this, I have decided to create the concept of
+a &ldquo;core&rdquo; media player whose sole purpose was to only deliver the multimedia experience while
+the more complex features would go inside of another media player I created called the <a href="https://github.com/mediafront/osmplayer">Open Standard Media Player</a>.
+This allows me to keep the core media functionality slim while still being able to extend onto the minPlayer
+class to provide the more advanced features such as Playlists and custom 3rd party integrations.</p>
+
+<!-- more -->
+
+
+<p>Here is the project page found at
+<a href="http://mediafront.org/assets/osmplayer/minplayer/index.html">http://mediafront.org/assets/osmplayer/minplayer/index.html</a>.</p>
+
+<iframe width="100%" height="5000px" frameborder="0" scrolling="no" src="http://mediafront.org/assets/osmplayer/minplayer/index.html"></iframe>
+
+]]></content>
+  </entry>
+  
+</feed>

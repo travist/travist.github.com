@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Using Phantom.js with Node.js - Travis Tidwell</title>
+  <meta name="author" content="Travis Tidwell">
+
+  
+  <meta name="description" content="Recently, I have had much interest in building web automation and testing tools
+using Node.js. The challenge, however, is when using Node.js for &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Travis Tidwell" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-450670-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Travis Tidwell</a></h1>
+  
+    <h2>Web technology, software, and everything else that bores my wife..</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:travistidwell.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div style="margin-left: 86px; height: 90px; padding: 10px 0 10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- frontpage banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="9043467163"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style="padding-top: 0px">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Using Phantom.js With Node.js</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-05T14:40:00-05:00" pubdate data-updated="true">Jul 5<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img class="left" src="http://phantomjs.org/img/phantomjs-logo.png" title="PhantomJS" > Recently, I have had much interest in building web automation and testing tools
+using Node.js.  The challenge, however, is when using Node.js for building tests
+and automation, your options are pretty slim when picking your headless browser.
+While <a href="http://zombie.labnotes.org/">Zombie.js</a> is a decent browser, it
+uses JSDOM for its layout engine, whereas most of the web is ran on (or based off of) <a href="https://www.webkit.org/">WebKit</a>.  This
+creates problems when trying to formulate accurate tests as well as benefit from
+the ongoing development into the WebKit engine.  What really peaked my interest
+was the project called <a href="http://phantomjs.org">Phantom.js</a> which is
+basically a headless WebKit browser that exposes a JavaScript API to interact with
+the browser.</p>
+
+<!-- more -->
+
+
+<p>Here is the problem&hellip; Phantom.js is not compatible with Node.js.  However, there is
+a project that does expose the Phantom.js browser within the Node.js environment.
+This project is called <a href="https://github.com/alexscheelmeyer/node-phantom">Node Phantom</a>,
+which does a great job at bringing PhantomJS to NodeJS.  But, there is still
+another issue where the API to this library is not easy to use like Zombie.js.</p>
+
+<p>That is why I built a library which leverages the Node-Phantom library, but brings
+in the <a href="http://zombie.labnotes.org/API">Zombie.js API</a> for ease of use.
+This library is called <a href="https://github.com/travist/zombie-phantom">Zombie Phantom</a>
+and I hope you enjoy it.</p>
+
+<p>Also, please read the <a href="https://github.com/travist/zombie-phantom">project description</a> to
+get an idea of the differences between this library and the Zombie API before using.</p>
+
+<p>Here is an <a href="https://github.com/travist/zombie-phantom/blob/master/example.js">example</a> of how to use this library.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">Browser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;zombie-phantom&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">browser</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Browser</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">site</span><span class="o">:</span> <span class="s1">&#39;http://localhost:8888&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">addJQuery</span><span class="o">:</span> <span class="kc">false</span>  <span class="c1">// This page already has jQuery installed so use it...</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">browser</span><span class="p">.</span><span class="nx">visit</span><span class="p">(</span><span class="s1">&#39;/user/login&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">browser</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#edit-name&#39;</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">browser</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#edit-pass&#39;</span><span class="p">,</span> <span class="s1">&#39;123password&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">browser</span><span class="p">.</span><span class="nx">pressButton</span><span class="p">(</span><span class="s1">&#39;#edit-submit&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;You are logged in!&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy&hellip;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Travis Tidwell</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-05T14:40:00-05:00" pubdate data-updated="true">Jul 5<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs/" data-via="softwaregnome" data-counturl="http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/06/18/mobile-drupal-with-sencha-touch/" title="Previous Post: Mobile Drupal with Sencha Touch">&laquo; Mobile Drupal with Sencha Touch</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/07/16/coder-soundtrack-volume-2/" title="Next Post: Coder Soundtrack volume 2">Coder Soundtrack volume 2 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <div style="margin-left: 50px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-1902035200208763"
+     data-ad-slot="8472459164"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/16/building-serverless-apps-with-form-dot-io/">Building Serverless Apps with Form.io</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/07/introducing-form-dot-io-the-combined-form-and-api-platform-for-developers/">Introducing Form.io: The combined Form and API platform for developers.</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/20/how-to-build-a-mean-web-application/">How to build a M.E.A.N web application</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/20/when-to-not-use-drupal/">When to NOT use Drupal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/17/coder-soundtrack-volume-4/">Coder Soundtrack Volume 4</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/travist">@travist</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'travist',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/114268766810402115376?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Travis Tidwell -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'travistidwell';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs/';
+        var disqus_url = 'http://travistidwell.com/blog/2013/07/05/using-phantomjs-with-nodejs/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

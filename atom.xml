@@ -4,7 +4,7 @@
   <title><![CDATA[Travis Tidwell]]></title>
   <link href="http://travistidwell.com/atom.xml" rel="self"/>
   <link href="http://travistidwell.com/"/>
-  <updated>2016-06-16T09:08:06-05:00</updated>
+  <updated>2016-06-30T09:07:39-05:00</updated>
   <id>http://travistidwell.com/</id>
   <author>
     <name><![CDATA[Travis Tidwell]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Online Lodash Tester]]></title>
+    <link href="http://travistidwell.com/blog/2016/06/30/online-lodash-tester/"/>
+    <updated>2016-06-30T08:53:21-05:00</updated>
+    <id>http://travistidwell.com/blog/2016/06/30/online-lodash-tester</id>
+    <content type="html"><![CDATA[<p>If there is one JavaScript library that could be classified as the Swiss Army Knives of JavaScript, it would have to be
+<a href="https://lodash.com/">Lodash</a>. Lodash is a tool that I use all the time in pretty much every single JavaScript project
+that I write, and I constantly find myself going to the website to read the documentation. If there is one thing that I
+wish I could do, however, it test my Lodash code within a JavaScript console before I place that within my code. It is this
+reason that I created an <a href="https://codepen.io/travist/full/jrBjBz/">Online Lodash Tester</a> within <a href="https://codepen.io">Codepen</a>.</p>
+
+<p>Enjoy!</p>
+
+<!-- more -->
+
+
+
+
+<p data-height="1419" data-theme-id="0" data-slug-hash="jrBjBz" data-default-tab="result" data-user="travist" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/travist/pen/jrBjBz/">Online Lodash Tester</a> by Travis Tidwell (<a href="http://codepen.io/travist">@travist</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Building Serverless Apps with Form.io]]></title>
@@ -1572,31 +1598,6 @@ and I would love for you to check it out&hellip;</p>
 
 
 <p>Happy Authenticating&hellip;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[minPlayer: A minimalistic, plugin-based 'core' media player for the web]]></title>
-    <link href="http://travistidwell.com/blog/2011/05/15/minplayer/"/>
-    <updated>2011-05-15T15:26:00-05:00</updated>
-    <id>http://travistidwell.com/blog/2011/05/15/minplayer</id>
-    <content type="html"><![CDATA[<p>Today I would like to introduce my latest media player creation. The <strong><a href="https://github.com/travist/minplayer">minPlayer</a></strong>.
-The idea behind this media player was that I have a lot of experience building web based
-multimedia players, but also noticed that I continually build more and more features into
-them based on clients requests.  Because of this, I have decided to create the concept of
-a &ldquo;core&rdquo; media player whose sole purpose was to only deliver the multimedia experience while
-the more complex features would go inside of another media player I created called the <a href="https://github.com/mediafront/osmplayer">Open Standard Media Player</a>.
-This allows me to keep the core media functionality slim while still being able to extend onto the minPlayer
-class to provide the more advanced features such as Playlists and custom 3rd party integrations.</p>
-
-<!-- more -->
-
-
-<p>Here is the project page found at
-<a href="http://mediafront.org/assets/osmplayer/minplayer/index.html">http://mediafront.org/assets/osmplayer/minplayer/index.html</a>.</p>
-
-<iframe width="100%" height="5000px" frameborder="0" scrolling="no" src="http://mediafront.org/assets/osmplayer/minplayer/index.html"></iframe>
-
 ]]></content>
   </entry>
   
